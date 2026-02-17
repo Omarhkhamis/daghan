@@ -1,0 +1,110 @@
+import DentalFooter from "../dental-implant/en/components/Footer";
+import DentalHeader from "../dental-implant/en/components/Header";
+import CustomHeadSnippet from "../../components/CustomHeadSnippet";
+import { getCustomHeader } from "../../../lib/customHeader";
+import { getGeneralSettings } from "../../../lib/generalSettings";
+import { getPageBySlug } from "../../../lib/pages";
+import { normalizeLocale } from "../../../lib/sites";
+
+export const dynamic = "force-dynamic";
+
+const renderParagraphs = (content) =>
+  String(content || "")
+    .split(/\n\s*\n/)
+    .filter(Boolean);
+
+const normalizeDigits = (value) => String(value || "").replace(/[^\d]/g, "");
+
+const SITE = "dental-implant";
+
+export default async function ThankYouPage({ searchParams }) {
+  const resolvedSearchParams = await searchParams;
+  const locale = normalizeLocale(resolvedSearchParams?.locale);
+
+  const [general, page, customHeader] = await Promise.all([
+    getGeneralSettings(SITE),
+    getPageBySlug("thankyou", locale),
+    getCustomHeader(SITE)
+  ]);
+
+  if (!page) {
+    return null;
+  }
+
+  const paragraphs = renderParagraphs(page.content);
+  const whatsappNumber = normalizeDigits(general?.whatsappNumber || "");
+  const phoneHref = general?.phone
+    ? `tel:${general.phone.replace(/[^\d+]/g, "")}`
+    : null;
+  const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}` : null;
+
+  return (
+    <>
+      <CustomHeadSnippet html={customHeader?.content} />
+      <DentalHeader general={general} locale={locale} />
+      <main className="relative overflow-hidden bg-gradient-to-br from-main-950 via-main-900 to-main-800 text-white pt-24">
+        <div className="absolute inset-0">
+          <div className="absolute left-[-20%] top-[-10%] h-64 w-64 rounded-full bg-copper-600/20 blur-[100px]" />
+          <div className="absolute right-[-15%] bottom-[-20%] h-72 w-72 rounded-full bg-copper-500/25 blur-[120px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.05),_transparent_45%)]" />
+        </div>
+
+        <section className="relative mx-auto flex min-h-[70vh] max-w-screen-xl flex-col items-center justify-center gap-10 px-6 py-16 text-center lg:px-12">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] uppercase tracking-[0.24em] text-main-100 shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/90 text-white shadow-lg">
+              <i className="fa-solid fa-check" />
+            </span>
+            <span className="text-xs font-semibold text-white">
+              {locale === "ru" ? "Запрос получен" : "Request Received"}
+            </span>
+          </div>
+
+          <div className="space-y-4">
+            <h1 className="text-3xl sm:text-4xl font-extralight tracking-[0.01em] text-white">
+              {page.title}
+            </h1>
+          </div>
+
+          <div className="mx-auto mt-2 max-w-3xl space-y-3 text-[15px] leading-relaxed text-main-100/85">
+            {paragraphs.length ? (
+              paragraphs.map((paragraph, index) => (
+                <p key={`thankyou-paragraph-${index}`}>{paragraph}</p>
+              ))
+            ) : (
+              <p>
+                {locale === "ru"
+                  ? "Мы свяжемся с вами в ближайшее время, чтобы подтвердить детали и подобрать удобное время."
+                  : "We'll call you shortly to confirm your details and book the best available time for you."}
+              </p>
+            )}
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {phoneHref ? (
+              <a
+                href={phoneHref}
+                className="rounded-lg border border-white/30 px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-white hover:bg-white/10"
+              >
+                {locale === "ru" ? "Позвонить" : "Call"}
+              </a>
+            ) : null}
+            {whatsappHref ? (
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg bg-copper-500 px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-white hover:bg-copper-400"
+              >
+                WhatsApp
+              </a>
+            ) : null}
+          </div>
+        </section>
+      </main>
+      <DentalFooter general={general} locale={locale} site={SITE} />
+      {customHeader?.bodyContent ? (
+        <div dangerouslySetInnerHTML={{ __html: customHeader.bodyContent }} />
+      ) : null}
+    </>
+  );
+}
