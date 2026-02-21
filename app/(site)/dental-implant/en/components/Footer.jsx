@@ -22,7 +22,7 @@ export default function Footer({ general, locale = "en", site }) {
   const footerNote =
     i18n?.footerNote || "Comfortable experience, clear planning, and premium results.";
   const copyrightCopy =
-    i18n?.copyright || "© 2025 BM TÜRKIEY. All Rights Reserved.";
+    i18n?.copyright || "© 2026 Dr Mehmet Daghan. All Rights Reserved.";
   const buildPageLink = (path) => {
     const params = new URLSearchParams();
     if (locale) params.set("locale", locale);
