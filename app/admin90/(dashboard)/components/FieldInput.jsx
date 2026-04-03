@@ -7,6 +7,14 @@ const isMediaField = (path) =>
   /image|video|background|poster|url/i.test(path);
 
 const isVideo = (url) => url.endsWith(".mp4");
+const MEDIA_ACCEPT =
+  ".png,.jpg,.jpeg,.jfif,.webp,.gif,.svg,.mp4,image/png,image/jpeg,image/webp,image/gif,image/svg+xml,video/mp4";
+
+const formatBytes = (size = 0) => {
+  if (size < 1024) return `${size} B`;
+  if (size < 1024 * 1024) return `${(size / 1024).toFixed(1)} KB`;
+  return `${(size / (1024 * 1024)).toFixed(1)} MB`;
+};
 
 const IconUpload = () => (
   <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
@@ -66,8 +74,10 @@ export default function FieldInput({ name, defaultValue, isTextarea, label }) {
         method: "POST",
         body: formData
       });
-      if (!response.ok) throw new Error("Upload failed");
-      const data = await response.json();
+      const data = await response.json().catch(() => null);
+      if (!response.ok) {
+        throw new Error(data?.error || "Upload failed");
+      }
       if (data?.url) {
         setValue(data.url);
         Swal.fire({
@@ -84,9 +94,10 @@ export default function FieldInput({ name, defaultValue, isTextarea, label }) {
         toast: true,
         position: "top-end",
         showConfirmButton: false,
-        timer: 1600,
+        timer: 2600,
         icon: "error",
-        title: "Upload failed"
+        title: "Upload failed",
+        text: error?.message || "Upload failed"
       });
     } finally {
       setIsUploading(false);
@@ -131,7 +142,7 @@ export default function FieldInput({ name, defaultValue, isTextarea, label }) {
               <input
                 type="file"
                 className="hidden"
-                accept="image/*,video/mp4"
+                accept={MEDIA_ACCEPT}
                 onChange={handleUpload}
                 disabled={isUploading}
               />
@@ -145,7 +156,7 @@ export default function FieldInput({ name, defaultValue, isTextarea, label }) {
               <IconLibrary />
             </button>
             <span className="text-[11px] text-slate-400">
-              Paste a URL or upload a file.
+              Paste a URL or upload PNG, JPG, JPEG, JFIF, WEBP, GIF, SVG, or MP4.
             </span>
           </div>
 
@@ -181,14 +192,22 @@ export default function FieldInput({ name, defaultValue, isTextarea, label }) {
                         <button
                           key={file.url}
                           type="button"
+                          disabled={file.isEmpty}
                           onClick={() => {
+                            if (file.isEmpty) return;
                             setValue(file.url);
                             setShowLibrary(false);
                           }}
-                          className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 text-left"
+                          className={`group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 text-left ${
+                            file.isEmpty ? "cursor-not-allowed opacity-60" : ""
+                          }`}
                         >
                           <div className="aspect-video w-full overflow-hidden bg-slate-200">
-                            {isVideo(file.url) ? (
+                            {file.isEmpty ? (
+                              <div className="flex h-full w-full items-center justify-center px-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">
+                                Empty file
+                              </div>
+                            ) : isVideo(file.url) ? (
                               <video
                                 src={file.url}
                                 className="h-full w-full object-cover"
@@ -203,7 +222,11 @@ export default function FieldInput({ name, defaultValue, isTextarea, label }) {
                             )}
                           </div>
                           <div className="p-3 text-xs text-slate-500">
-                            {file.name}
+                            <div className="truncate">{file.name}</div>
+                            <div className="mt-1 text-[11px] text-slate-400">
+                              {formatBytes(file.size)}
+                              {file.isEmpty ? " · Re-upload this asset" : ""}
+                            </div>
                           </div>
                         </button>
                       ))}

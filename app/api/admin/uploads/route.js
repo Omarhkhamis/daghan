@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { readdir, unlink } from "fs/promises";
+import { readdir, stat, unlink } from "fs/promises";
 import path from "path";
 
 const collectUploads = async (baseDir, relativeDir = "") => {
@@ -14,10 +14,14 @@ const collectUploads = async (baseDir, relativeDir = "") => {
       const nested = await collectUploads(baseDir, nextRelative);
       files.push(...nested);
     } else {
+      const filePath = path.join(baseDir, nextRelative);
+      const fileStat = await stat(filePath);
       const urlPath = nextRelative.split(path.sep).join("/");
       files.push({
         name: urlPath,
-        url: `/uploads/${urlPath}`
+        url: `/uploads/${urlPath}`,
+        size: fileStat.size,
+        isEmpty: fileStat.size === 0
       });
     }
   }

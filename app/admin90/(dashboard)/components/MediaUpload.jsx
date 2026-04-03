@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 
+const MEDIA_ACCEPT =
+  ".png,.jpg,.jpeg,.jfif,.webp,.gif,.svg,.mp4,image/png,image/jpeg,image/webp,image/gif,image/svg+xml,video/mp4";
+
 export default function MediaUpload() {
   const [isUploading, setIsUploading] = useState(false);
 
@@ -20,11 +23,11 @@ export default function MediaUpload() {
         body: formData
       });
 
-      if (!response.ok) {
-        throw new Error("Upload failed");
-      }
+      const data = await response.json().catch(() => null);
 
-      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data?.error || "Upload failed");
+      }
       Swal.fire({
         toast: true,
         position: "top-end",
@@ -44,9 +47,10 @@ export default function MediaUpload() {
         toast: true,
         position: "top-end",
         showConfirmButton: false,
-        timer: 1800,
+        timer: 2600,
         icon: "error",
-        title: "Upload failed"
+        title: "Upload failed",
+        text: error?.message || "Upload failed"
       });
     } finally {
       setIsUploading(false);
@@ -58,7 +62,10 @@ export default function MediaUpload() {
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Upload</p>
       <p className="mt-2 text-sm text-slate-600">
-        PNG, JPG, WEBP, GIF, SVG, MP4 supported. Max 20MB.
+        PNG, JPG, JPEG, JFIF, WEBP, GIF, SVG, MP4 supported. Max 50MB.
+      </p>
+      <p className="mt-1 text-xs text-slate-500">
+        HEIC and AVIF are not supported in the dashboard uploader.
       </p>
 
       <div className="mt-4">
@@ -67,7 +74,7 @@ export default function MediaUpload() {
           <input
             type="file"
             className="hidden"
-            accept="image/*,video/mp4"
+            accept={MEDIA_ACCEPT}
             onChange={handleUpload}
             disabled={isUploading}
           />

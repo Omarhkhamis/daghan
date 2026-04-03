@@ -1,4 +1,4 @@
-import { readdir } from "fs/promises";
+import { readdir, stat } from "fs/promises";
 import path from "path";
 
 import MediaUpload from "../components/MediaUpload";
@@ -20,10 +20,14 @@ const collectUploads = async (baseDir, relativeDir = "") => {
       const nested = await collectUploads(baseDir, nextRelative);
       files.push(...nested);
     } else {
+      const filePath = path.join(baseDir, nextRelative);
+      const fileStat = await stat(filePath);
       const urlPath = nextRelative.split(path.sep).join("/");
       files.push({
         name: urlPath,
-        url: `/uploads/${urlPath}`
+        url: `/uploads/${urlPath}`,
+        size: fileStat.size,
+        isEmpty: fileStat.size === 0
       });
     }
   }

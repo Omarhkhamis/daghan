@@ -3,6 +3,11 @@
 import Swal from "sweetalert2";
 
 const isVideo = (url) => url.endsWith(".mp4");
+const formatBytes = (size = 0) => {
+  if (size < 1024) return `${size} B`;
+  if (size < 1024 * 1024) return `${(size / 1024).toFixed(1)} KB`;
+  return `${(size / (1024 * 1024)).toFixed(1)} MB`;
+};
 
 export default function MediaGallery({ files }) {
   if (!files.length) {
@@ -83,7 +88,11 @@ export default function MediaGallery({ files }) {
                 >
                   ×
                 </button>
-                {isVideo(file.url) ? (
+                {file.isEmpty ? (
+                  <div className="flex h-full w-full items-center justify-center px-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-amber-700">
+                    Empty file
+                  </div>
+                ) : isVideo(file.url) ? (
                   <video
                     src={file.url}
                     className="h-full w-full object-cover"
@@ -99,9 +108,13 @@ export default function MediaGallery({ files }) {
                 )}
               </div>
               <div className="mt-3 flex items-center justify-between gap-2">
-                <span className="truncate text-xs text-slate-500">
-                  {file.name}
-                </span>
+                <div className="min-w-0">
+                  <div className="truncate text-xs text-slate-500">{file.name}</div>
+                  <div className="mt-1 text-[11px] text-slate-400">
+                    {formatBytes(file.size)}
+                    {file.isEmpty ? " · Re-upload or delete" : ""}
+                  </div>
+                </div>
                 <button
                   type="button"
                   onClick={() => handleCopy(file.url)}
