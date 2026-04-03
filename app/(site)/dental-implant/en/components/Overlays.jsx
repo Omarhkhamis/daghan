@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import LuckySpinFormSec from "./sections/LuckySpinFormSec";
 import ConsultationFormCard from "./ConsultationFormCard";
 import { heroDefaults } from "../../../../../lib/sectionDefaults";
+import { getLocaleUi } from "../../../../../lib/localeCopy";
 
 const BODY_LOCK_CLASS = "overflow-hidden";
 
@@ -14,20 +15,21 @@ export default function Overlays({
   whatsappLink,
   luckySpinData,
   locale,
-  site
+  site,
+  showPrivacyConsent
 }) {
   const [isLuckyOpen, setIsLuckyOpen] = useState(false);
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const spinButtonRef = useRef(null);
   const resolvedForm = heroData?.form || heroDefaults.form;
-  const isRu = locale === "ru";
+  const uiCopy = getLocaleUi(locale);
   const copy = {
-    close: isRu ? "Закрыть" : "Close",
-    whatsappCta: isRu ? "Бесплатная консультация" : "Free Consultation",
-    whatsappLabel: isRu ? "Бесплатная" : "Free",
-    consultationLabel: isRu ? "Консультация" : "Consultation",
-    openLuckySpin: isRu ? "Открыть Лаки-спин" : "Open Lucky Spin",
-    tryChance: isRu ? "Испытай удачу!" : "Try your chance!"
+    close: uiCopy.common.close,
+    whatsappCta: uiCopy.overlays.freeConsultation,
+    whatsappLabel: uiCopy.overlays.free,
+    consultationLabel: uiCopy.overlays.consultation,
+    openLuckySpin: uiCopy.overlays.openLuckySpin,
+    tryChance: uiCopy.overlays.tryChance
   };
 
   useEffect(() => {
@@ -111,11 +113,6 @@ export default function Overlays({
   const handleOpen = () => setIsLuckyOpen(true);
   const handleClose = () => setIsLuckyOpen(false);
   const handleConsultationClose = () => setIsConsultationOpen(false);
-  const handleConsultationOpen = () => {
-    if (typeof window === "undefined") return;
-    window.dispatchEvent(new CustomEvent("open-book-consultation"));
-  };
-
   return (
     <>
       {isConsultationOpen && (
@@ -146,6 +143,7 @@ export default function Overlays({
                 form={resolvedForm}
                 idPrefix="consultation-modal"
                 className="w-full"
+                showPrivacyConsent={showPrivacyConsent}
               />
             </div>
           </div>
@@ -181,20 +179,25 @@ export default function Overlays({
                 data={luckySpinData}
                 locale={locale}
                 site={site}
+                showPrivacyConsent={showPrivacyConsent}
               />
             </div>
           </div>
         </>
       )}
 
-      <button
-        type="button"
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noreferrer"
         aria-label={copy.whatsappCta}
         className="fixed bottom-6 lg:hover:-translate-y-0.5  transition left-4 lg:bottom-7 sm:left-7 z-[9999]"
-        onClick={handleConsultationOpen}
       >
         <div className="relative rounded-xl p-[1.2px] wa-shimmer-border">
           <div className="flex items-center gap-3 rounded-xl bg-white px-3.5 py-2.5 border border-main-200/60">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-green-50 text-green-600">
+              <i className="fa-brands fa-whatsapp text-[19px]" aria-hidden="true"></i>
+            </span>
             <span className="h-6 w-px bg-main-400/40"></span>
 
             <span className="flex flex-col leading-tight">
@@ -209,7 +212,7 @@ export default function Overlays({
             <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-green-500/80"></span>
           </div>
         </div>
-      </button>
+      </a>
 
       <button
         type="button"

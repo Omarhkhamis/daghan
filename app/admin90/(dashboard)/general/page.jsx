@@ -111,6 +111,29 @@ export default async function GeneralSettingsPage({ searchParams }) {
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-xs uppercase tracking-[0.24em] text-slate-400">
+            Form Settings
+          </p>
+
+          <label className="mt-4 flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+            <input
+              type="checkbox"
+              name="showPrivacyConsent"
+              defaultChecked={settings.styles?.showPrivacyConsent !== false}
+              className="mt-0.5 h-4 w-4 rounded border-slate-300 text-copper-600 focus:ring-copper-500"
+            />
+            <span>
+              <span className="block font-medium text-slate-900">
+                Show Privacy Policy Consent
+              </span>
+              <span className="mt-1 block text-xs text-slate-500">
+                Controls the “By submitting the form, you agree to the Privacy Policy” line under all forms.
+              </span>
+            </span>
+          </label>
+        </div>
+
+        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p className="text-xs uppercase tracking-[0.24em] text-slate-400">
             Social Links
           </p>
 

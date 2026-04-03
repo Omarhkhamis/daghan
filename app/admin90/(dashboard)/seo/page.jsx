@@ -1,3 +1,4 @@
+import { getLocaleOptions } from "@lib/localeCopy";
 import { getSeoSettings } from "@lib/seoSettings";
 import { normalizeLocale, normalizeSite } from "@lib/sites";
 import { updateSeoSettingsAction } from "../actions";
@@ -11,6 +12,7 @@ export default async function SeoSettingsPage({ searchParams }) {
   const locale = normalizeLocale(resolvedSearchParams?.locale);
   const seo = await getSeoSettings(site, locale);
   const action = updateSeoSettingsAction.bind(null, site);
+  const localeOptions = getLocaleOptions();
 
   return (
     <AdminShell site={site} locale={locale}>
@@ -29,27 +31,20 @@ export default async function SeoSettingsPage({ searchParams }) {
               Control how your page appears in search and link previews.
             </p>
           </div>
-          <div className="flex gap-2">
-            <a
-              href={`/admin90/seo?locale=en`}
-              className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] ${
-                locale === "en"
-                  ? "border-copper-500 text-copper-700 bg-copper-50"
-                  : "border-slate-200 text-slate-600 bg-white"
-              }`}
-            >
-              EN
-            </a>
-            <a
-              href={`/admin90/seo?locale=ru`}
-              className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] ${
-                locale === "ru"
-                  ? "border-copper-500 text-copper-700 bg-copper-50"
-                  : "border-slate-200 text-slate-600 bg-white"
-              }`}
-            >
-              RU
-            </a>
+          <div className="flex gap-2 flex-wrap">
+            {localeOptions.map((item) => (
+              <a
+                key={item.code}
+                href={`/admin90/seo?locale=${item.code}`}
+                className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] ${
+                  locale === item.code
+                    ? "border-copper-500 text-copper-700 bg-copper-50"
+                    : "border-slate-200 text-slate-600 bg-white"
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

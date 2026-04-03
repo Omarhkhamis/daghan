@@ -1,4 +1,5 @@
 import ReorderSections from "../components/ReorderSections";
+import { getLocaleOptions } from "@lib/localeCopy";
 import { getSectionsByLocale } from "@lib/sections";
 import { normalizeLocale, normalizeSite } from "@lib/sites";
 import AdminShell from "../AdminShell";
@@ -11,6 +12,7 @@ export default async function SectionsReorderPage({ searchParams }) {
   const locale = normalizeLocale(resolvedSearchParams?.locale);
   const sections = await getSectionsByLocale(site, locale);
   const reordered = resolvedSearchParams?.reordered === "1";
+  const localeOptions = getLocaleOptions();
 
   return (
     <AdminShell site={site} locale={locale}>
@@ -34,27 +36,20 @@ export default async function SectionsReorderPage({ searchParams }) {
         ) : null}
       </div>
 
-      <div className="flex gap-2">
-        <a
-          href={`/admin90/sections?locale=en`}
-          className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] ${
-            locale === "en"
-              ? "border-copper-500 text-copper-700 bg-copper-50"
-              : "border-slate-200 text-slate-600 bg-white"
-          }`}
-        >
-          EN
-        </a>
-        <a
-          href={`/admin90/sections?locale=ru`}
-          className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] ${
-            locale === "ru"
-              ? "border-copper-500 text-copper-700 bg-copper-50"
-              : "border-slate-200 text-slate-600 bg-white"
-          }`}
-        >
-          RU
-        </a>
+      <div className="flex gap-2 flex-wrap">
+        {localeOptions.map((item) => (
+          <a
+            key={item.code}
+            href={`/admin90/sections?locale=${item.code}`}
+            className={`rounded-lg border px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] ${
+              locale === item.code
+                ? "border-copper-500 text-copper-700 bg-copper-50"
+                : "border-slate-200 text-slate-600 bg-white"
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
       </div>
 
       <ReorderSections site={site} initialSections={sections} locale={locale} />

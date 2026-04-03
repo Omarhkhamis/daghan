@@ -6,6 +6,7 @@ import Overlays from "../dental-implant/en/components/Overlays";
 import { getGeneralSettings } from "@lib/generalSettings";
 import { getSectionsByLocale, getSectionsMap } from "@lib/sections";
 import { getSeoSettings } from "@lib/seoSettings";
+import { SUPPORTED_LOCALES } from "@lib/sites";
 import {
   HeroSlide,
   DentalImplantSec,
@@ -35,8 +36,6 @@ export const viewport = {
 };
 
 export const dynamic = "force-dynamic";
-
-const SUPPORTED_LOCALES = ["en", "ru"];
 const SITE = "dental-implant";
 
 const toAbsolute = (path, baseUrl) => {
@@ -107,8 +106,9 @@ export async function generateMetadata({ params }) {
         ? {
             canonical: canonicalPath,
             languages: {
-              en: `${baseUrl}/en`,
-              ru: `${baseUrl}/ru`,
+              ...Object.fromEntries(
+                SUPPORTED_LOCALES.map((lang) => [lang, `${baseUrl}/${lang}`])
+              ),
               "x-default": `${baseUrl}/en`
             }
           }
@@ -147,6 +147,7 @@ export default async function DentalImplantPage({ params }) {
   const whatsappLink = whatsappNumber
     ? `https://wa.me/${whatsappNumber}`
     : "https://wa.me/+905465266449";
+  const showPrivacyConsent = general?.styles?.showPrivacyConsent !== false;
 
   return (
     <>
@@ -163,16 +164,25 @@ export default async function DentalImplantPage({ params }) {
                     key={section.key}
                     data={data}
                     whatsappLink={whatsappLink}
+                    showPrivacyConsent={showPrivacyConsent}
                   />
                 );
               case "dentalImplant":
-                return <DentalImplantSec key={section.key} data={data} />;
+                return (
+                  <DentalImplantSec
+                    key={section.key}
+                    data={data}
+                    whatsappLink={whatsappLink}
+                    locale={locale}
+                  />
+                );
               case "popularTreatments":
                 return (
                   <PopularTreatments
                     key={section.key}
                     data={data}
                     whatsappLink={whatsappLink}
+                    locale={locale}
                   />
                 );
               case "bookAppointmentPrimary":
@@ -180,31 +190,69 @@ export default async function DentalImplantPage({ params }) {
                   <BookAppointmentFormSec
                     key={section.key}
                     data={data}
+                    showPrivacyConsent={showPrivacyConsent}
                   />
                 );
               case "beforeAfter":
-                return <BeforeAfter key={section.key} data={data} />;
+                return (
+                  <BeforeAfter
+                    key={section.key}
+                    data={data}
+                    whatsappLink={whatsappLink}
+                    locale={locale}
+                  />
+                );
               case "certificatesGallery":
-                return <CertificatesGallery key={section.key} data={data} />;
+                return (
+                  <CertificatesGallery
+                    key={section.key}
+                    data={data}
+                    locale={locale}
+                  />
+                );
               case "fullWidthCampaign":
                 return <FullWidthCampaignBanner key={section.key} data={data} />;
               case "stepForm":
-                return <StepFormSec key={section.key} data={data} />;
+                return (
+                  <StepFormSec
+                    key={section.key}
+                    data={data}
+                    showPrivacyConsent={showPrivacyConsent}
+                  />
+                );
               case "treatments":
-                return <Treatments key={section.key} data={data} />;
+                return (
+                  <Treatments
+                    key={section.key}
+                    data={data}
+                    whatsappLink={whatsappLink}
+                    locale={locale}
+                  />
+                );
               case "bookAppointmentSecondary":
                 return (
                   <BookAppointmentFormSec2
                     key={section.key}
                     data={data}
+                    showPrivacyConsent={showPrivacyConsent}
                   />
                 );
               case "internationalPatients":
                 return (
-                  <InternationalPatientsSec key={section.key} data={data} />
+                  <InternationalPatientsSec
+                    key={section.key}
+                    data={data}
+                    whatsappLink={whatsappLink}
+                  />
                 );
               case "teamMembers":
-                return <TeamMembers key={section.key} data={data} />;
+                return (
+                  <TeamMembers
+                    key={section.key}
+                    data={data}
+                    locale={locale}
+                  />
+                );
               case "clinic":
                 return (
                   <ClinicSec
@@ -223,18 +271,45 @@ export default async function DentalImplantPage({ params }) {
                     data={data}
                     locale={locale}
                     site={SITE}
+                    showPrivacyConsent={showPrivacyConsent}
                   />
                 );
               case "implantMatrix":
                 return <ImplantMatrix key={section.key} data={data} />;
               case "techniquesUsed":
-                return <TechniquesUsed key={section.key} data={data} />;
+                return (
+                  <TechniquesUsed
+                    key={section.key}
+                    data={data}
+                    locale={locale}
+                  />
+                );
               case "googleReviews":
-                return <GoogleReviews key={section.key} data={data} />;
+                return (
+                  <GoogleReviews
+                    key={section.key}
+                    data={data}
+                    whatsappLink={whatsappLink}
+                    locale={locale}
+                  />
+                );
               case "trustpilotReviews":
-                return <TrustpilotReviews key={section.key} data={data} />;
+                return (
+                  <TrustpilotReviews
+                    key={section.key}
+                    data={data}
+                    whatsappLink={whatsappLink}
+                    locale={locale}
+                  />
+                );
               case "faqs":
-                return <Faqs key={section.key} data={data} />;
+                return (
+                  <Faqs
+                    key={section.key}
+                    data={data}
+                    showPrivacyConsent={showPrivacyConsent}
+                  />
+                );
               default:
                 return null;
             }
@@ -248,6 +323,7 @@ export default async function DentalImplantPage({ params }) {
         luckySpinData={sectionsMap.luckySpin?.data}
         locale={locale}
         site={SITE}
+        showPrivacyConsent={showPrivacyConsent}
       />
     </>
   );

@@ -1,6 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-
-const SUPPORTED_LOCALES = ["en", "ru"];
+import { SUPPORTED_LOCALES } from "../../../../lib/sites";
 
 export default async function LegacyDentalImplantLocalePage({ params }) {
   const resolvedParams = await params;

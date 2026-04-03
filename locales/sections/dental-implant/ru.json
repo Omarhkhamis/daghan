@@ -1,0 +1,768 @@
+{
+  "footer": {
+    "about": "В BM TÜRKIEY мы восстанавливаем стабильные и естественные улыбки с помощью имплантологии и современного протезирования. Прозрачное планирование и опытная команда обеспечивают предсказуемый результат.",
+    "phoneLabel": "Телефон:",
+    "whatsappLabel": "WhatsApp:",
+    "emailLabel": "мейл:",
+    "addressLabel": "Адрес:",
+    "treatments": "Услуги",
+    "popular": "Популярное",
+    "beforeAfter": "До и После",
+    "testimonials": "Отзывы",
+    "faqs": "FAQ",
+    "healthTourism": "Медицинский туризм",
+    "badge": "Современная стоматология • Индивидуальный подход",
+    "footerNote": "Комфортный опыт, понятный план и премиальные результаты.",
+    "copyright": "© 2025 BM TÜRKIEY. Все права защищены.",
+    "privacy": "Политика конфиденциальности",
+    "terms": "Условия"
+  },
+  "hero": {
+    "videoUrl": "/img/general/tan%C4%B1t%C4%B1m.mp4",
+    "kicker": "Стамбул • Турция",
+    "titleLine1": "Дентальные импланты в Турции",
+    "titleLine2": "с BM TÜRKIEY",
+    "subtitle": "Современная имплантация, протезирование и устойчивые результаты в сердце Стамбула.",
+    "whatsappCta": "Консультация в WhatsApp →",
+    "form": {
+      "kicker": "Записаться",
+      "title": "Назначить консультацию по имплантам",
+      "description": "Оставьте контакты — координатор свяжется в ближайшее время.",
+      "privacyNote": "Ваши данные конфиденциальны.",
+      "submittingText": "ОТПРАВКА...",
+      "submitText": "ОТПРАВИТЬ",
+      "fields": {
+        "fullNameLabel": "Полное имя",
+        "fullNamePlaceholder": "Имя Фамилия",
+        "phoneLabel": "Телефон",
+        "phonePlaceholder": "+7 ...",
+        "emailLabel": "мейл",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Комментарий (опционально)",
+        "messagePlaceholder": "Опишите задачу: отсутствующие зубы, протезы, цель."
+      }
+    }
+  },
+  "dentalImplant": {
+    "headingLine1": "Имплантация и",
+    "headingLine2": "полноарочные решения",
+    "paragraphs": [
+      "Мы восстанавливаем уверенность в улыбке с помощью направляемой имплантации, возможности немедленной нагрузки и точного протезирования под каждый челюстной сегмент.",
+      "От одиночных имплантов до All-on-4/All-on-6 — хирург и ортопед работают на долговечность, комфорт жевания и естественную эстетику."
+    ],
+    "buttonText": "Получить расчёт →",
+    "mainImage": "/uploads/dental-implant/smile1.jpg",
+    "mainImageAlt": "Результат имплантации",
+    "detailImage": "/uploads/dental-implant/smile2.jpg",
+    "detailImageAlt": "Деталь протеза"
+  },
+  "popularTreatments": {
+    "kicker": "Имплант-решения",
+    "title": "Популярные варианты",
+    "description": "Направляемая имплантация с опорой на стабильность, быстрое заживление и натуральный вид протезов.",
+    "ctaText": "Обсудить мой случай →",
+    "ctaHref": "https://wa.me/+905465266449",
+    "items": [
+      {
+        "title": "All-on-4 / All-on-6",
+        "description": "Фиксированные полноарочные решения с направляемой хирургией и временным мостом при показаниях.",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg",
+        "alt": "All-on-4 импланты"
+      },
+      {
+        "title": "Одиночные и множественные импланты",
+        "description": "Замена одного или нескольких зубов с точной установкой имплантов и индивидуальными коронками.",
+        "image": "/uploads/dental-implant/smile3.jpg",
+        "alt": "Одиночный имплант"
+      },
+      {
+        "title": "Мосты на имплантах",
+        "description": "Стабильные и гигиеничные мосты на имплантах для восстановления жевания и формы зубов.",
+        "image": "/uploads/dental-implant/zirkonyum-veneers.jpg",
+        "alt": "Мост на имплантах"
+      },
+      {
+        "title": "Костная пластика и синус-лифт",
+        "description": "Вертикальное/латеральное наращивание, синус-лифт и поддержка PRF для подготовки к имплантам.",
+        "image": "/uploads/dental-implant/sec-veneers.jpg",
+        "alt": "Костная пластика"
+      }
+    ]
+  },
+  "bookAppointmentPrimary": {
+    "backgroundImage": "/uploads/clinic/clinic-1.jpeg",
+    "kicker": "Записаться",
+    "title": "Запланировать консультацию",
+    "description": "Опишите отсутствующие зубы, протезы или цель лечения. Свяжемся и обсудим план.",
+    "privacyNote": "Ваши данные конфиденциальны.",
+    "submittingText": "ОТПРАВКА...",
+    "submitText": "ОТПРАВИТЬ",
+    "fields": {
+      "fullNameLabel": "Полное имя",
+      "fullNamePlaceholder": "Имя Фамилия",
+      "phoneLabel": "Телефон",
+      "phonePlaceholder": "+7 ...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Комментарий (опционально)",
+      "messagePlaceholder": "Опишите задачу/ожидания."
+    }
+  },
+  "bookAppointmentSecondary": {
+    "backgroundImage": "/uploads/clinic/clinic-1.jpeg",
+    "kicker": "Записаться",
+    "title": "Запланировать консультацию",
+    "description": "Опишите отсутствующие зубы, протезы или цель лечения. Свяжемся и обсудим план.",
+    "privacyNote": "Ваши данные конфиденциальны.",
+    "submittingText": "ОТПРАВКА...",
+    "submitText": "ОТПРАВИТЬ",
+    "fields": {
+      "fullNameLabel": "Полное имя",
+      "fullNamePlaceholder": "Имя Фамилия",
+      "phoneLabel": "Телефон",
+      "phonePlaceholder": "+7 ...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Комментарий (опционально)",
+      "messagePlaceholder": "Опишите задачу/ожидания."
+    }
+  },
+  "beforeAfter": {
+    "titleLine1": "Центр имплантации",
+    "titleLine2": "в Стамбуле, Турция",
+    "bullets": [
+      {
+        "prefix": "Более ",
+        "highlight": "12 000 имплантов",
+        "suffix": " установлено"
+      },
+      {
+        "prefix": "Более ",
+        "highlight": "4 500 полных дуг",
+        "suffix": " восстановлено"
+      },
+      {
+        "prefix": "Цифровое планирование и ",
+        "highlight": "направляемая хирургия",
+        "suffix": ""
+      },
+      {
+        "prefix": "",
+        "highlight": "Вечерние/выходные приём",
+        "suffix": " — по запросу"
+      }
+    ],
+    "ctaText": "Консультация по имплантам →",
+    "cases": [
+      {
+        "image": "/uploads/ba3.jpg",
+        "caption": "Реабилитация на имплантах"
+      },
+      {
+        "image": "/uploads/ba2.jpg",
+        "caption": "Реабилитация на имплантах"
+      },
+      {
+        "image": "/uploads/ba4.jpg",
+        "caption": "Реабилитация на имплантах"
+      },
+      {
+        "image": "/uploads/ba13.jpg",
+        "caption": "Реабилитация на имплантах"
+      },
+      {
+        "image": "/uploads/ba6.jpg",
+        "caption": "Реабилитация на имплантах"
+      }
+    ]
+  },
+  "fullWidthCampaign": {
+    "backgroundImage": "/uploads/air.jpg",
+    "backgroundAlt": "Предложение для имплантации",
+    "overlayImage": "/uploads/dental-implant/smile3.jpg",
+    "overlayAlt": "Кейс имплантации",
+    "badge": "Импланты",
+    "headingLine1": "Билет",
+    "headingLine2": "в подарок (All-on-X)",
+    "description": "Авиабилет туда-обратно для подходящих полноарочных кейсов."
+  },
+  "stepForm": {
+    "image": "/uploads/dental-implant/step-form-image.jpg",
+    "imageAlt": "Dental implant planning",
+    "kicker": "Быстрая проверка",
+    "title": "Бесплатный анализ имплантов",
+    "progressLabel": "Progress",
+    "stepLabel": "Step",
+    "totalSteps": 3,
+    "selectedLabel": "Selected:",
+    "steps": {
+      "step1Title": "Выберите тип случая",
+      "step1Description": "Укажите, что нужно восстановить, чтобы подобрать подход к имплантации.",
+      "step2Title": "Предпочитаемое решение",
+      "step2Description": "Выберите оптимальный вариант. Итоговый план утверждается после диагностики.",
+      "step3Title": "Оставьте контакты",
+      "step3Description": "Наши координаторы изучат информацию и перезвонят.",
+      "privacyNote": "Ваши данные конфиденциальны."
+    },
+    "genderOptions": [
+      {
+        "value": "single",
+        "label": "1–3 зуба",
+        "helper": "Тип",
+        "icon": "fa-tooth"
+      },
+      {
+        "value": "full-arch",
+        "label": "Вся челюсть",
+        "helper": "Тип",
+        "icon": "fa-teeth-open"
+      },
+      {
+        "value": "denture",
+        "label": "Съёмный протез",
+        "helper": "Тип",
+        "icon": "fa-face-smile"
+      }
+    ],
+    "toothOptions": [
+      {
+        "key": "single-implant",
+        "label": "Одиночный имплант",
+        "image": "/uploads/dental-implant/smile1.jpg"
+      },
+      {
+        "key": "implant-bridge",
+        "label": "Мост на имплантах",
+        "image": "/uploads/dental-implant/zirkonyum-veneers.jpg"
+      },
+      {
+        "key": "all-on-4",
+        "label": "All-on-4",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg"
+      },
+      {
+        "key": "all-on-6",
+        "label": "All-on-6",
+        "image": "/uploads/dental-implant/smile3.jpg"
+      },
+      {
+        "key": "bone-graft",
+        "label": "Костная пластика",
+        "image": "/uploads/dental-implant/sec-veneers.jpg"
+      }
+    ],
+    "fields": {
+      "fullNameLabel": "Полное имя",
+      "fullNamePlaceholder": "Имя Фамилия",
+      "phoneLabel": "Телефон",
+      "phonePlaceholder": "+7 ..."
+    },
+    "prevLabel": "Назад",
+    "nextLabel": "Далее",
+    "submitLabel": "Отправить"
+  },
+  "treatments": {
+    "kicker": "Имплантология",
+    "titleLine1": "Импланты",
+    "titleLine2": "полноарочные и одиночные",
+    "description": "Фиксированные имплант-решения, возвращающие жевание и уверенность. Направляемая хирургия, индивидуальные протезы.",
+    "highlights": [
+      "Немедленная/ранняя нагрузка при показаниях",
+      "3D-навигация",
+      "Индивидуальные каркасы из циркония/керамики"
+    ],
+    "noteLabel": "Важно",
+    "noteText": "Окончательная тактика подтверждается после КЛКТ и осмотра.",
+    "galleryLabel": "Все работы",
+    "galleryHref": "/dental-implant/ru/gallery",
+    "ctaText": "Записаться к врачу →",
+    "mediaItems": [
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "DWjaF4lDca8",
+        "poster": "/reels/DWjaF4lDca8.jpg",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "b285Dt47ipQ",
+        "poster": "/reels/b285Dt47ipQ.avif",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "Ht_YQEh9Gwo",
+        "poster": "/reels/Ht_YQEh9Gwo.avif",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "Ev7R2x0UCZo",
+        "poster": "/reels/Ev7R2x0UCZo.avif",
+        "aspect": "9/16"
+      }
+    ]
+  },
+  "teamMembers": {
+    "kicker": "Команда",
+    "title": "Специалисты, создающие улыбки",
+    "description": "Мультидисциплинарная команда стоматологов и координаторов для надёжных, естественных результатов.",
+    "items": [
+      {
+        "name": "Д-р Селин А.",
+        "role": "Ведущий эстетист",
+        "description": "12+ лет в эстетической стоматологии: виниры, дизайн улыбки, минимальная инвазия.",
+        "image": "/uploads/team/dr-selin.jpg",
+        "alt": "Д-р Селин"
+      },
+      {
+        "name": "Д-р Эмир К.",
+        "role": "Имплантолог, ортопед",
+        "description": "Полноарочные реабилитации, планирование имплантов, восстановление прикуса.",
+        "image": "/uploads/team/dr-emir.jpg",
+        "alt": "Д-р Эмир"
+      },
+      {
+        "name": "Элиф Т.",
+        "role": "Координатор пациентов",
+        "description": "Сопровождение международных пациентов, расписание приёмов, прозрачные шаги.",
+        "image": "/uploads/team/elif.jpg",
+        "alt": "Элиф"
+      },
+      {
+        "name": "Мерт Ч.",
+        "role": "Ассистент",
+        "description": "Помощь у кресла, стерилизация, контроль тайминга приёмов.",
+        "image": "/uploads/team/mert.jpg",
+        "alt": "Мерт"
+      }
+    ]
+  },
+  "internationalPatients": {
+    "backgroundImage": "/uploads/general/istanbul.jpg",
+    "backgroundAlt": "Istanbul",
+    "kicker": "• Стамбул • Медицинский туризм •",
+    "titleLine1": "BM TÜRKIEY",
+    "titleLine2": "Программа для иностранных пациентов",
+    "description": "Персонализированное и безопасное лечение для международных пациентов: эксперты, современное оборудование и выделенные координаторы.",
+    "buttonText": "Записаться >"
+  },
+  "clinic": {
+    "images": [
+      {
+        "src": "/uploads/clinic/clinic-1.jpeg",
+        "alt": "Clinic moment 1"
+      },
+      {
+        "src": "/uploads/clinic/clinic-2.jpeg",
+        "alt": "Clinic moment 2"
+      },
+      {
+        "src": "/uploads/clinic/clinic-3.jpeg",
+        "alt": "Clinic moment 3"
+      },
+      {
+        "src": "/uploads/clinic/clinic-4.jpeg",
+        "alt": "Clinic moment 4"
+      },
+      {
+        "src": "/uploads/clinic/clinic-6.jpeg",
+        "alt": "Clinic moment 5"
+      },
+      {
+        "src": "/uploads/clinic/clinic-7.jpeg",
+        "alt": "Clinic moment 6"
+      }
+    ],
+    "kicker": "Стамбул • Турция",
+    "titleLine1": "Награды",
+    "titleLine2": "и доверие пациентов",
+    "paragraphs": [
+      "Многие годы мы создаём естественные и долговечные улыбки для пациентов из Турции и других стран. Планируем индивидуально, сочетая минимальную инвазивность и цифровые протоколы.",
+      "Мы гордимся персонализированным подходом, вниманием к деталям и результатами, которые повышают уверенность."
+    ],
+    "ctaText": "Консультация в WhatsApp →"
+  },
+  "healthTourism": {
+    "kicker": "4 шага",
+    "title": "к идеальному прикусу",
+    "description": "От первого сообщения до финального чекапа — сопровождаем весь путь лечения в Atom Clinic.",
+    "steps": [
+      {
+        "icon": "fa-comments",
+        "label": "ШАГ 1",
+        "title": "Опишите проблему",
+        "description": "Пришлите жалобы, фото, КТ (если есть) через WhatsApp/email. Координатор изучит случай."
+      },
+      {
+        "icon": "fa-clipboard-list",
+        "label": "ШАГ 2",
+        "title": "План и смета",
+        "description": "В течение 24 часов врачи подготовят индивидуальный план лечения, сроки и прозрачную стоимость."
+      },
+      {
+        "icon": "fa-plane-departure",
+        "label": "ШАГ 3",
+        "title": "Путешествие и лечение",
+        "description": "После выбора дат организуем трансфер из аэропорта, варианты отеля и визиты в клинику."
+      },
+      {
+        "icon": "fa-check-circle",
+        "label": "ШАГ 4",
+        "title": "Финальный контроль",
+        "description": "Перед отъездом проведём контроль, дадим рекомендации по уходу и дальнейшие шаги."
+      }
+    ]
+  },
+  "luckySpin": {
+    "backgroundImage": "/uploads/spin-bg-bottom.png",
+    "backgroundAlt": "",
+    "kicker": "Лаки-спин",
+    "tagline": "Испытайте удачу",
+    "title": "Крутите и выиграйте",
+    "description": "Розыгрыш скидок на лечение.",
+    "spinLabel": "Крутить",
+    "spinLoadingLabel": "Крутится...",
+    "resultLabel": "Ваш приз",
+    "resultPlaceholder": "Крутите, чтобы узнать.",
+    "prizes": [
+      "20% Скидка",
+      "$75 Скидка",
+      "10% Скидка",
+      "50% Flight Ticket",
+      "$50 Скидка",
+      "$100 Скидка",
+      "15% Скидка",
+      "$150 Скидка"
+    ],
+    "form": {
+      "title": "Получить приз",
+      "description": "Оставьте контакты, чтобы забрать приз.",
+      "fields": {
+        "fullNameLabel": "Полное имя",
+        "fullNamePlaceholder": "Имя Фамилия",
+        "phoneLabel": "Телефон",
+        "phonePlaceholder": "+7 ..."
+      },
+      "submitText": "Отправить",
+      "privacyNote": "Ваши данные конфиденциальны."
+    }
+  },
+  "implantMatrix": {
+    "kicker": "Матрица методов",
+    "title": "Имплант-решения кратко",
+    "description": "Сравните основные методики, показания, сроки в Турции и результаты. План уточняется после диагностики.",
+    "columns": [
+      "Техника",
+      "Тип",
+      "Кандидаты",
+      "Преимущества",
+      "Недостатки",
+      "Сроки в Турции",
+      "Результат"
+    ],
+    "rows": [
+      {
+        "technique": "Одиночный имплант",
+        "type": "Titanium post + crown",
+        "candidates": "От 1 до 3 отсутствующих зубов",
+        "advantages": "Натуральное ощущение, отдельная опора",
+        "disadvantages": "Небольшая операция, время заживления",
+        "timeInTurkey": "5–7 дней + заживление",
+        "results": "Долговечно при правильном уходе",
+        "values": [
+          "Single Implant",
+          "Titanium post + crown",
+          "1–3 missing teeth",
+          "Natural feel, independent support",
+          "Minor surgery, healing time",
+          "5–7 days + healing",
+          "Lifelong with proper care"
+        ]
+      },
+      {
+        "technique": "All-on-4 / All-on-6",
+        "type": "Full-arch prosthesis on implants",
+        "candidates": "Полное отсутствие или разрушенные зубы",
+        "advantages": "Фиксированный, стабильный полный ряд",
+        "disadvantages": "Нужен период заживления",
+        "timeInTurkey": "7–10 дней",
+        "results": "Стабильная полноарочная улыбка",
+        "values": [
+          "All-on-4 / All-on-6",
+          "Full-arch prosthesis on implants",
+          "Fully edentulous or failing dentition",
+          "Fixed, stable, full set of teeth",
+          "Requires healing period",
+          "7–10 days",
+          "Full-arch smile with high stability"
+        ]
+      },
+      {
+        "technique": "Циркониевые коронки на имплантах",
+        "type": "Ceramic crown on implant",
+        "candidates": "Эстетическая зона, фокус на красоте",
+        "advantages": "Высокая эстетика, без металла",
+        "disadvantages": "Более высокая стоимость",
+        "timeInTurkey": "5–7 дней",
+        "results": "Натуральный вид, крепкий прикус",
+        "values": [
+          "Zirconium Implant Crowns",
+          "Ceramic crown on implant",
+          "Aesthetic zones, cosmetic focus",
+          "Highly aesthetic, metal-free",
+          "Higher cost",
+          "5–7 days",
+          "Natural look, strong bite"
+        ]
+      },
+      {
+        "technique": "Костная пластика",
+        "type": "Graft material + healing",
+        "candidates": "Дефицит кости",
+        "advantages": "Позволяет имплантацию в сложных случаях",
+        "disadvantages": "Требуется заживление",
+        "timeInTurkey": "1–2 дня (+ заживление)",
+        "results": "Надёжная база под импланты",
+        "values": [
+          "Bone Grafting",
+          "Graft material + healing",
+          "Patients with jawbone loss",
+          "Enables implants in difficult cases",
+          "Healing time required",
+          "1–2 days (plus healing)",
+          "Strong foundation for implants"
+        ]
+      },
+      {
+        "technique": "Немедленные импланты",
+        "type": "Extraction + implant + temp tooth",
+        "candidates": "Только при хорошем объёме кости",
+        "advantages": "Без ожидания, мгновенные зубы",
+        "disadvantages": "Подходит не всем",
+        "timeInTurkey": "1–2 дня",
+        "results": "Мгновенная улыбка, долгосрочно",
+        "values": [
+          "Immediate Implants",
+          "Extraction + implant + temp tooth",
+          "Select patients with healthy bone",
+          "No waiting period, instant teeth",
+          "Not suitable for everyone",
+          "1–2 days",
+          "Instant smile, long-term solution"
+        ]
+      },
+      {
+        "technique": "Цифровое планирование",
+        "type": "3D imaging + guided surgery",
+        "candidates": "Все пациенты с показаниями",
+        "advantages": "Точность и безопасность",
+        "disadvantages": "Дополнительный этап планирования",
+        "timeInTurkey": "В день планирования",
+        "results": "Точная установка имплантов",
+        "values": [
+          "Digital Implant Planning",
+          "3D imaging + guided surgery",
+          "All implant patients",
+          "Safe, accurate, less invasive",
+          "Adds planning step",
+          "Same day (planning)",
+          "Precise implant placement"
+        ]
+      }
+    ]
+  },
+  "techniquesUsed": {
+    "kicker": "Используемые техники",
+    "title": "Ключевые имплант-методики",
+    "description": "От немедленной имплантации до направляемой хирургии — основные подходы нашей команды.",
+    "slides": [
+      {
+        "title": "Немедленные импланты",
+        "body": "Подходящим пациентам удаление и установка импланта проводятся за один визит, с временной коронкой. Это снижает сроки лечения и избавляет от съёмных протезов на этапе заживления.",
+        "image": "/uploads/dental-implant/smile2.jpg"
+      },
+      {
+        "title": "All-on-4 / All-on-6",
+        "body": "Полноарочная реабилитация на 4–6 имплантах с направляемым планированием и временными мостами при показаниях — быстрый возврат функции и уверенности.",
+        "image": "/uploads/dental-implant/smile3.jpg"
+      },
+      {
+        "title": "Направляемая хирургия",
+        "body": "3D-визуализация, хирургические шаблоны и точное позиционирование для безопасности и долговечности как одиночных, так и полноарочных кейсов.",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg"
+      }
+    ]
+  },
+  "googleReviews": {
+    "kicker": "Отзывы Google",
+    "title": "Реальные истории пациентов",
+    "description": "Что говорят международные пациенты об опыте в BM TÜRKIEY.",
+    "rating": "4.9",
+    "ratingCountLabel": "380+ отзывов",
+    "ctaText": "Бесплатная консультация →",
+    "items": [
+      {
+        "initials": "MM",
+        "name": "Matthew",
+        "text": "The entire implant process was seamless from the first WhatsApp message to the final check-up. The team explained every step clearly, helped with timing, and made me feel genuinely cared for. My new implant bridge looks incredibly natural — even months later, chewing feels stable and comfortable.",
+        "count": "57 Reviews"
+      },
+      {
+        "initials": "SS",
+        "name": "Sophie",
+        "text": "Super professional team and a beautiful clinic. I felt safe, informed, and the results exceeded my expectations.",
+        "count": "12 Reviews"
+      },
+      {
+        "initials": "HH",
+        "name": "Helen",
+        "text": "Loved the planning and communication. Everything ran on time, and the aftercare instructions were very clear.",
+        "count": "4 Reviews"
+      },
+      {
+        "initials": "DD",
+        "name": "Daniel",
+        "text": "The process was very transparent. I knew exactly what would be done and how long it would take. The result looks natural and feels great.",
+        "count": "23 Reviews"
+      },
+      {
+        "initials": "EE",
+        "name": "Emily",
+        "text": "Natural-looking teeth were my priority, and they nailed it. The shade and shape of my implant crowns fit my face perfectly.",
+        "count": "9 Reviews"
+      },
+      {
+        "initials": "OO",
+        "name": "Oliver",
+        "text": "The clinic was spotless and the team was very attentive. Aftercare support was excellent and they replied quickly whenever I had a question.",
+        "count": "31 Reviews"
+      }
+    ]
+  },
+  "trustpilotReviews": {
+    "kicker": "Отзывы Trustpilot",
+    "title": "Реальные истории пациентов",
+    "description": "Что говорят международные пациенты об опыте в BM TÜRKIEY.",
+    "rating": "4.9",
+    "ratingCountLabel": "380+ отзывов",
+    "ctaText": "Бесплатная консультация →",
+    "items": [
+      {
+        "initials": "MM",
+        "name": "Matthew",
+        "text": "The entire implant process was seamless from the first WhatsApp message to the final check-up. The team explained every step clearly, helped with timing, and made me feel genuinely cared for. My new implant bridge looks incredibly natural — even months later, chewing feels stable and comfortable.",
+        "count": "57 Reviews"
+      },
+      {
+        "initials": "SS",
+        "name": "Sophie",
+        "text": "Super professional team and a beautiful clinic. I felt safe, informed, and the results exceeded my expectations.",
+        "count": "12 Reviews"
+      },
+      {
+        "initials": "HH",
+        "name": "Helen",
+        "text": "Loved the planning and communication. Everything ran on time, and the aftercare instructions were very clear.",
+        "count": "4 Reviews"
+      },
+      {
+        "initials": "DD",
+        "name": "Daniel",
+        "text": "The process was very transparent. I knew exactly what would be done and how long it would take. The result looks natural and feels great.",
+        "count": "23 Reviews"
+      },
+      {
+        "initials": "EE",
+        "name": "Emily",
+        "text": "Natural-looking teeth were my priority, and they nailed it. The shade and shape of my implant crowns fit my face perfectly.",
+        "count": "9 Reviews"
+      },
+      {
+        "initials": "OO",
+        "name": "Oliver",
+        "text": "The clinic was spotless and the team was very attentive. Aftercare support was excellent and they replied quickly whenever I had a question.",
+        "count": "31 Reviews"
+      }
+    ]
+  },
+  "faqs": {
+    "kicker": "Центр помощи",
+    "title": "Частые вопросы",
+    "description": "Краткие ответы для международных пациентов.",
+    "responseTimeLabel": "Среднее время ответа:",
+    "responseTimeValue": "30 минут",
+    "footerNote": "Окончательный план уточняется после клинической оценки.",
+    "form": {
+      "kicker": "Записаться",
+      "title": "Назначить консультацию",
+      "description": "Оставьте контакты — мы свяжемся в ближайшее время.",
+      "submittingText": "ОТПРАВКА...",
+      "submitText": "ОТПРАВИТЬ",
+      "privacyNote": "Ваши данные конфиденциальны.",
+      "fields": {
+        "fullNameLabel": "Полное имя",
+        "fullNamePlaceholder": "Имя Фамилия",
+        "phoneLabel": "Телефон",
+        "phonePlaceholder": "+7 ...",
+        "emailLabel": "мейл",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Комментарий",
+        "messagePlaceholder": "Расскажите о цели лечения."
+      }
+    },
+    "items": [
+      {
+        "icon": "fa-circle-question",
+        "title": "Сколько времени нужно на пребывание?",
+        "subtitle": "Полноарочные кейсы обычно 5–7 дней; этапность обсуждаем заранее.",
+        "body": "При All-on-4/6: диагностика, операция и временный мост в течение недели. Если нужна костная пластика, планируем поэтапно с понятными сроками."
+      },
+      {
+        "icon": "fa-tooth",
+        "title": "Больно ли ставить импланты?",
+        "subtitle": "Современная анестезия и навигация минимизируют дискомфорт.",
+        "body": "Пациенты описывают давление, а не боль. Лёгкая болезненность после — купируется препаратами и чёткими рекомендациями."
+      },
+      {
+        "icon": "fa-shield-heart",
+        "title": "Есть ли гарантия и сопровождение?",
+        "subtitle": "Чёткие инструкции по уходу и дистанционная поддержка.",
+        "body": "Вы получите письменные рекомендации, дистанционные контрольные связи и информацию по гарантии производителя имплантов и протезов."
+      },
+      {
+        "icon": "fa-credit-card",
+        "title": "Можно ли получить смету заранее?",
+        "subtitle": "Да, после оценки фото/КТ предоставим предварительный план и стоимость.",
+        "body": "Поделитесь данными и визуализацией; подготовим план и ориентировочную смету. Итоговая цена зависит от клинической оценки и объёма."
+      }
+    ]
+  },
+  "certificatesGallery": {
+    "kicker": "Сертификаты",
+    "title": "Галерея сертификатов",
+    "description": "Официальные сертификаты и подтверждения, отражающие наши стандарты качества.",
+    "items": [
+      {
+        "image": "/uploads/ba2.jpg",
+        "alt": "Сертификат 1"
+      },
+      {
+        "image": "/uploads/ba3.jpg",
+        "alt": "Сертификат 2"
+      },
+      {
+        "image": "/uploads/ba4.jpg",
+        "alt": "Сертификат 3"
+      },
+      {
+        "image": "/uploads/ba6.jpg",
+        "alt": "Сертификат 4"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@ import {
 } from "../../../../../../lib/pageLinks";
 import PhoneField from "../../../../components/PhoneField";
 
-export default function StepFormSec({ data }) {
+export default function StepFormSec({ data, showPrivacyConsent = true }) {
   const content = data || stepFormDefaults;
   const toothOptions = content.toothOptions || [];
   const genderOptions = content.genderOptions || [];
@@ -306,14 +306,16 @@ export default function StepFormSec({ data }) {
                         </span>
                         {content.steps?.privacyNote}
                       </div>
-                      <p className="mt-2 text-[12px] text-main-500">
-                        <a
-                          href={privacyLink}
-                          className="underline decoration-main-400/70 underline-offset-4 hover:text-main-700"
-                        >
-                          {privacyText}
-                        </a>
-                      </p>
+                      {showPrivacyConsent ? (
+                        <p className="mt-2 text-[12px] text-main-500">
+                          <a
+                            href={privacyLink}
+                            className="underline decoration-main-400/70 underline-offset-4 hover:text-main-700"
+                          >
+                            {privacyText}
+                          </a>
+                        </p>
+                      ) : null}
                     </>
                   )}
                 </div>

@@ -3,12 +3,17 @@
 import { useEffect, useRef, useState } from "react";
 
 import { beforeAfterDefaults } from "../../../../../../lib/sectionDefaults";
+import { getLocaleUi } from "../../../../../../lib/localeCopy";
+import { isRtlLocale } from "../../../../../../lib/sites";
+import WhatsAppCta from "../WhatsAppCta";
 
-export default function BeforeAfter({ data }) {
+export default function BeforeAfter({ data, whatsappLink, locale = "en" }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
   const [isDesktopPaused, setIsDesktopPaused] = useState(false);
   const content = data || beforeAfterDefaults;
+  const uiCopy = getLocaleUi(locale);
+  const isRtl = isRtlLocale(locale);
   const cases = content.cases || [];
   const items = cases.length ? [...cases, ...cases, ...cases] : [];
   const sliderRef = useRef(null);
@@ -262,7 +267,11 @@ export default function BeforeAfter({ data }) {
             </span>
           </h2>
 
-          <ul className="space-y-4 font-light text-[15px] mb-12 text-main-800">
+          <ul
+            className={`space-y-4 font-light text-[15px] mb-12 text-main-800 ${
+              isRtl ? "text-right" : ""
+            }`}
+          >
             {content.bullets?.map((item, index) => (
               <li key={`${item.highlight}-${index}`} className="flex items-start gap-3">
                 <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-copper-600 text-white text-[11px] font-semibold shadow-sm">✓</span>
@@ -275,14 +284,13 @@ export default function BeforeAfter({ data }) {
             ))}
           </ul>
 
-          <button
-            type="button"
+          <WhatsAppCta
+            href={whatsappLink}
+            ariaLabel={content.ctaText}
             className="rounded-xl bg-gradient-to-r from-copper-600 to-copper-500 text-white shadow-[0_10px_10px_rgba(0,0,0,0.09)] hover:from-copper-700 hover:to-copper-500 px-4 py-3 text-[11.5px] font-medium uppercase tracking-[0.13em] inline-flex items-center justify-center cursor-pointer transition-transform duration-200 ease-out disabled:opacity-60 disabled:pointer-events-none"
-            onClick={() =>
-              window.dispatchEvent(new CustomEvent("open-book-consultation"))
-            }
           >
-            {content.ctaText}</button>
+            <span>{content.ctaText}</span>
+          </WhatsAppCta>
         </div>
 
         <div className="relative order-2 w-[90vw] max-w-[90vw] mx-auto lg:mx-0 lg:mt-0 lg:w-full lg:max-w-full lg:-ml-0">
@@ -291,7 +299,7 @@ export default function BeforeAfter({ data }) {
               <div className="pointer-events-none absolute inset-y-0 left-0 right-0 z-10 flex items-center justify-between px-2">
                 <button
                   type="button"
-                  aria-label="السابق"
+                  aria-label={uiCopy.common.previous}
                   onClick={() => scrollByAmount(-1)}
                   className="pointer-events-auto h-10 w-10 rounded-full border border-main-200 bg-white/95 text-main-700 shadow-md transition hover:bg-white"
                 >
@@ -299,7 +307,7 @@ export default function BeforeAfter({ data }) {
                 </button>
                 <button
                   type="button"
-                  aria-label="التالي"
+                  aria-label={uiCopy.common.next}
                   onClick={() => scrollByAmount(1)}
                   className="pointer-events-auto h-10 w-10 rounded-full border border-main-200 bg-white/95 text-main-700 shadow-md transition hover:bg-white"
                 >
@@ -309,12 +317,16 @@ export default function BeforeAfter({ data }) {
 
               <div
                 ref={sliderRef}
+                dir="ltr"
                 className="flex gap-6 overflow-x-auto px-4 pb-3 no-scrollbar snap-x snap-mandatory"
               >
                 {items.map((item, index) => (
                   <article
                     key={`${item.image}-${index}-mobile`}
-                    className="shrink-0 w-[85%] snap-start rounded-3xl rounded-b-none bg-white border border-main-200/70 overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.05)]"
+                    dir={isRtl ? "rtl" : "ltr"}
+                    className={`shrink-0 w-[85%] snap-start rounded-3xl rounded-b-none bg-white border border-main-200/70 overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.05)] ${
+                      isRtl ? "text-right" : ""
+                    }`}
                   >
                     <div className="relative aspect-[3/4] bg-main-50">
                       <img
@@ -356,12 +368,16 @@ export default function BeforeAfter({ data }) {
 
               <div
                 ref={desktopSliderRef}
+                dir="ltr"
                 className="flex gap-6 overflow-x-auto pb-4 pr-4 no-scrollbar"
               >
                 {items.map((item, index) => (
                   <article
                     key={`${item.image}-${index}`}
-                    className="shrink-0 w-[calc(100vw-3rem)] sm:w-[calc(50vw-2.5rem)] md:w-[325px]"
+                    dir={isRtl ? "rtl" : "ltr"}
+                    className={`shrink-0 w-[calc(100vw-3rem)] sm:w-[calc(50vw-2.5rem)] md:w-[325px] ${
+                      isRtl ? "text-right" : ""
+                    }`}
                   >
                     <div className="rounded-xl border border-main-200 overflow-hidden bg-white">
                       <img
@@ -395,7 +411,7 @@ export default function BeforeAfter({ data }) {
               <button
                 type="button"
                 className="absolute top-3 right-3 z-20 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white text-xl font-light hover:bg-black/80 cursor-pointer transition"
-                aria-label="Close"
+                aria-label={uiCopy.common.close}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="leading-none translate-y-[-1px] select-none">

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 
+import { getLocaleUi } from "../../../../../../lib/localeCopy";
 import { techniquesUsedDefaults } from "../../../../../../lib/sectionDefaults";
 
 const safeSlides = (slides) =>
@@ -9,8 +10,9 @@ const safeSlides = (slides) =>
     ? slides
     : techniquesUsedDefaults.slides;
 
-export default function TechniquesUsed({ data }) {
+export default function TechniquesUsed({ data, locale = "en" }) {
   const content = data || techniquesUsedDefaults;
+  const uiCopy = getLocaleUi(locale);
   const slides = safeSlides(content.slides);
   const [index, setIndex] = useState(0);
 
@@ -57,7 +59,7 @@ export default function TechniquesUsed({ data }) {
               type="button"
               onClick={prev}
               className="h-10 w-10 rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
-              aria-label="Previous slide"
+              aria-label={uiCopy.common.previousSlide}
             >
               <span className="text-lg">‹</span>
             </button>
@@ -65,7 +67,7 @@ export default function TechniquesUsed({ data }) {
               type="button"
               onClick={next}
               className="h-10 w-10 rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
-              aria-label="Next slide"
+              aria-label={uiCopy.common.nextSlide}
             >
               <span className="text-lg">›</span>
             </button>
@@ -125,7 +127,7 @@ export default function TechniquesUsed({ data }) {
               type="button"
               onClick={prev}
               className="h-10 w-10 rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
-              aria-label="Previous slide"
+              aria-label={uiCopy.common.previousSlide}
             >
               <span className="text-lg">‹</span>
             </button>
@@ -133,7 +135,7 @@ export default function TechniquesUsed({ data }) {
               type="button"
               onClick={next}
               className="h-10 w-10 rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
-              aria-label="Next slide"
+              aria-label={uiCopy.common.nextSlide}
             >
               <span className="text-lg">›</span>
             </button>

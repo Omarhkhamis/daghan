@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import { popularTreatmentsDefaults } from "../../../../../../lib/sectionDefaults";
+import { getLocaleUi } from "../../../../../../lib/localeCopy";
+import { isRtlLocale } from "../../../../../../lib/sites";
+import WhatsAppCta from "../WhatsAppCta";
 
-export default function PopularTreatments({ data, whatsappLink }) {
+export default function PopularTreatments({ data, whatsappLink, locale = "en" }) {
   const content = data || popularTreatmentsDefaults;
+  const uiCopy = getLocaleUi(locale);
+  const isRtl = isRtlLocale(locale);
   const treatments = content.items || [];
   const [current, setCurrent] = useState(0);
   const total = treatments.length || 1;
-  const handleConsultationOpen = () => {
-    if (typeof window === "undefined") return;
-    window.dispatchEvent(new CustomEvent("open-book-consultation"));
-  };
   const goTo = (direction) => {
     setCurrent((prev) => {
       const next = (prev + direction + total) % total;
@@ -21,7 +22,10 @@ export default function PopularTreatments({ data, whatsappLink }) {
   const renderCard = (item) => (
     <article
       key={item.title}
-      className="group rounded-3xl bg-white border border-main-200/70 overflow-hidden"
+      dir={isRtl ? "rtl" : "ltr"}
+      className={`group rounded-3xl bg-white border border-main-200/70 overflow-hidden ${
+        isRtl ? "text-right" : ""
+      }`}
     >
       <div className="relative aspect-[16/10] bg-main-50">
         <img
@@ -43,13 +47,13 @@ export default function PopularTreatments({ data, whatsappLink }) {
           {item.description}
         </p>
 
-        <button
-          type="button"
+        <WhatsAppCta
+          href={whatsappLink}
+          ariaLabel={content.ctaText}
           className="mt-7 inline-flex items-center gap-2 text-[15px] font-light cursor-pointer text-copper-700 hover:text-copper-900 transition"
-          onClick={handleConsultationOpen}
         >
-          {content.ctaText}
-        </button>
+          <span>{content.ctaText}</span>
+        </WhatsAppCta>
       </div>
     </article>
   );
@@ -79,6 +83,7 @@ export default function PopularTreatments({ data, whatsappLink }) {
             <div className="relative sm:hidden">
               <div className="overflow-hidden">
                 <div
+                  dir="ltr"
                   className="flex transition-transform duration-500 ease-out"
                   style={{ transform: `translateX(-${current * 100}%)` }}
                 >
@@ -94,7 +99,7 @@ export default function PopularTreatments({ data, whatsappLink }) {
                 type="button"
                 className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white shadow-md border border-main-200 text-main-700 hover:text-main-900 h-10 w-10 flex items-center justify-center"
                 onClick={() => goTo(-1)}
-                aria-label="Previous"
+                aria-label={uiCopy.common.previous}
               >
                 ‹
               </button>
@@ -102,7 +107,7 @@ export default function PopularTreatments({ data, whatsappLink }) {
                 type="button"
                 className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-white shadow-md border border-main-200 text-main-700 hover:text-main-900 h-10 w-10 flex items-center justify-center"
                 onClick={() => goTo(1)}
-                aria-label="Next"
+                aria-label={uiCopy.common.next}
               >
                 ›
               </button>

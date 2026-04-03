@@ -1,0 +1,61 @@
+{
+  "common": {
+    "ok": "Tamam",
+    "close": "Kapat",
+    "previous": "Onceki",
+    "next": "Sonraki",
+    "previousSlide": "Onceki slayt",
+    "nextSlide": "Sonraki slayt",
+    "call": "Ara",
+    "callUs": "Bizi Arayin",
+    "whatsapp": "WhatsApp",
+    "verified": "Dogrulandi",
+    "hoverToReadMore": "Devami icin uzerine gelin",
+    "requestReceived": "Talebiniz Alindi"
+  },
+  "header": {
+    "bookConsultation": "Konsultasyon Al"
+  },
+  "overlays": {
+    "freeConsultation": "Ucretsiz Danisma",
+    "free": "Ucretsiz",
+    "consultation": "Danisma",
+    "openLuckySpin": "Sans Carkini Ac",
+    "tryChance": "Sansini dene!"
+  },
+  "forms": {
+    "requiredField": "Bu alan zorunludur.",
+    "invalidPhone": "Lutfen gecerli bir telefon numarasi girin.",
+    "invalidEmail": "Lutfen gecerli bir e-posta adresi girin.",
+    "invalidInputTitle": "Gecersiz bilgi",
+    "checkHighlightedFields": "Lutfen isaretli alanlari kontrol edin.",
+    "submissionFailed": "Form gonderimi basarisiz oldu.",
+    "privacyConsent": "Formu gondererek Gizlilik Politikasini kabul etmis olursunuz"
+  },
+  "luckySpin": {
+    "submitError": "Lutfen tekrar deneyin. Sonucunuz kaydedilemedi.",
+    "missingFields": "Lutfen adinizi ve telefon numaranizi girin.",
+    "prizeTitle": "Kazandiniz"
+  },
+  "thankYou": {
+    "fallbackParagraph": "Detaylarinizi dogrulamak ve size en uygun zamani ayarlamak icin sizi kisa sure icinde arayacagiz."
+  },
+  "footer": {
+    "about": "BM TURKIYE'de implantoloji ve modern protetik uygulamalarla dogal ve saglam gulusler tasarliyoruz. Deneyimli ekibimiz, ileri teknoloji ve seffaf planlama sayesinde sureciniz ilk mesajdan son kontrole kadar ongorulebilir olur.",
+    "phoneLabel": "Telefon:",
+    "whatsappLabel": "WhatsApp:",
+    "emailLabel": "E-posta:",
+    "addressLabel": "Adres:",
+    "treatments": "Tedaviler",
+    "popular": "Populer Tedaviler",
+    "beforeAfter": "Once & Sonra",
+    "testimonials": "Yorumlar",
+    "faqs": "SSS",
+    "healthTourism": "Saglik Turizmi",
+    "badge": "Ileri dis hekimligi • Kisisel yaklasim",
+    "footerNote": "Konforlu deneyim, net planlama ve premium sonuclar.",
+    "copyright": "© 2026 Dr Mehmet Daghan. Tum haklari saklidir.",
+    "privacy": "Gizlilik Politikasi",
+    "terms": "Kullanim Sartlari"
+  }
+}

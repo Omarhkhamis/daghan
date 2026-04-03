@@ -3,8 +3,10 @@ import DentalHeader from "../dental-implant/en/components/Header";
 import CustomHeadSnippet from "../../components/CustomHeadSnippet";
 import { getCustomHeader } from "../../../lib/customHeader";
 import { getGeneralSettings } from "../../../lib/generalSettings";
+import { getLocaleFontClassName } from "../../../lib/localeFont";
+import { getLocaleUi } from "../../../lib/localeCopy";
 import { getPageBySlug } from "../../../lib/pages";
-import { normalizeLocale } from "../../../lib/sites";
+import { isRtlLocale, normalizeLocale } from "../../../lib/sites";
 
 export const dynamic = "force-dynamic";
 
@@ -26,6 +28,8 @@ export default async function ThankYouPage({ searchParams }) {
     getPageBySlug("thankyou", locale),
     getCustomHeader(SITE)
   ]);
+  const uiCopy = getLocaleUi(locale);
+  const localeFontClassName = getLocaleFontClassName(locale);
 
   if (!page) {
     return null;
@@ -39,7 +43,11 @@ export default async function ThankYouPage({ searchParams }) {
   const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}` : null;
 
   return (
-    <>
+    <div
+      lang={locale}
+      dir={isRtlLocale(locale) ? "rtl" : "ltr"}
+      className={localeFontClassName}
+    >
       <CustomHeadSnippet html={customHeader?.content} />
       <DentalHeader general={general} locale={locale} />
       <main className="relative overflow-hidden bg-gradient-to-br from-main-950 via-main-900 to-main-800 text-white pt-24">
@@ -55,7 +63,7 @@ export default async function ThankYouPage({ searchParams }) {
               <i className="fa-solid fa-check" />
             </span>
             <span className="text-xs font-semibold text-white">
-              {locale === "ru" ? "Запрос получен" : "Request Received"}
+              {uiCopy.common.requestReceived}
             </span>
           </div>
 
@@ -72,9 +80,7 @@ export default async function ThankYouPage({ searchParams }) {
               ))
             ) : (
               <p>
-                {locale === "ru"
-                  ? "Мы свяжемся с вами в ближайшее время, чтобы подтвердить детали и подобрать удобное время."
-                  : "We'll call you shortly to confirm your details and book the best available time for you."}
+                {uiCopy.thankYou.fallbackParagraph}
               </p>
             )}
           </div>
@@ -85,7 +91,7 @@ export default async function ThankYouPage({ searchParams }) {
                 href={phoneHref}
                 className="rounded-lg border border-white/30 px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-white hover:bg-white/10"
               >
-                {locale === "ru" ? "Позвонить" : "Call"}
+                {uiCopy.common.call}
               </a>
             ) : null}
             {whatsappHref ? (
@@ -105,6 +111,6 @@ export default async function ThankYouPage({ searchParams }) {
       {customHeader?.bodyContent ? (
         <div dangerouslySetInnerHTML={{ __html: customHeader.bodyContent }} />
       ) : null}
-    </>
+    </div>
   );
 }

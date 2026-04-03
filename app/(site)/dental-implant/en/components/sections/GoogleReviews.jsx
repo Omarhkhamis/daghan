@@ -2,10 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { getLocaleUi } from "../../../../../../lib/localeCopy";
 import { googleReviewsDefaults } from "../../../../../../lib/sectionDefaults";
+import { isRtlLocale } from "../../../../../../lib/sites";
+import WhatsAppCta from "../WhatsAppCta";
 
-export default function GoogleReviews({ data }) {
+export default function GoogleReviews({ data, whatsappLink, locale = "en" }) {
   const content = data || googleReviewsDefaults;
+  const uiCopy = getLocaleUi(locale);
+  const isRtl = isRtlLocale(locale);
   const reviews = content.items || [];
   const trackRef = useRef(null);
   const stateRef = useRef({
@@ -144,7 +149,7 @@ export default function GoogleReviews({ data }) {
           </div>
         </div>
 
-        <div className="relative mt-10 marquee">
+        <div className="relative mt-10 marquee" dir="ltr">
           <div className="pointer-events-none md:block absolute inset-y-0 left-0 w-14 sm:w-30 bg-gradient-to-r from-white via-white/90 to-transparent z-10"></div>
           <div className="pointer-events-none md:block absolute inset-y-0 right-0 w-14 sm:w-30 bg-gradient-to-l from-white via-white/90 to-transparent z-10"></div>
 
@@ -164,7 +169,10 @@ export default function GoogleReviews({ data }) {
             {marqueeItems.map((review, index) => (
               <article
                 key={`${review.name}-${index}`}
-                className="review-card w-[320px] sm:w-[360px] rounded-3xl border border-main-200/70 bg-white/55 backdrop-blur-md px-6 py-6"
+                dir={isRtl ? "rtl" : "ltr"}
+                className={`review-card w-[320px] sm:w-[360px] rounded-3xl border border-main-200/70 bg-white/55 backdrop-blur-md px-6 py-6 ${
+                  isRtl ? "text-right" : ""
+                }`}
               >
                 <div className="flex items-start gap-4">
                   <div className="h-12 w-12 shrink-0 rounded-full bg-gradient-to-b from-copper-500 to-copper-400 text-white flex items-center justify-center font-semibold">
@@ -178,7 +186,7 @@ export default function GoogleReviews({ data }) {
                       </p>
                     </div>
                     <span className="text-[11px] tracking-[0.18em] uppercase text-main-500">
-                      Verified
+                      {uiCopy.common.verified}
                     </span>
                   </div>
                 </div>
@@ -188,7 +196,7 @@ export default function GoogleReviews({ data }) {
                 </div>
 
                 <div className="mt-5 flex items-center justify-between text-xs text-main-500">
-                  <span className="text-copper-700/80">Hover to read more</span>
+                  <span className="text-copper-700/80">{uiCopy.common.hoverToReadMore}</span>
                   <span>{review.count}</span>
                 </div>
               </article>
@@ -199,14 +207,13 @@ export default function GoogleReviews({ data }) {
         <div className="flex flex-col pt-15 gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div>
-              <button
-                type="button"
+              <WhatsAppCta
+                href={whatsappLink}
+                ariaLabel={content.ctaText}
                 className="rounded-xl bg-gradient-to-r from-copper-600 to-copper-500 text-white shadow-[0_10px_10px_rgba(0,0,0,0.09)] hover:from-copper-700 hover:to-copper-500 px-4 py-3 text-[11.5px] font-medium uppercase tracking-[0.13em] inline-flex items-center justify-center cursor-pointer transition-transform duration-200 ease-out disabled:opacity-60 disabled:pointer-events-none"
-                onClick={() =>
-                  window.dispatchEvent(new CustomEvent("open-book-consultation"))
-                }
               >
-                {content.ctaText}</button>
+                <span>{content.ctaText}</span>
+              </WhatsAppCta>
             </div>
           </div>
         </div>

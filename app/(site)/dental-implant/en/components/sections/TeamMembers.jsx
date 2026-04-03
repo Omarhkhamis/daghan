@@ -2,9 +2,11 @@
 
 import { useRef } from "react";
 import { teamMembersDefaults } from "../../../../../../lib/sectionDefaults";
+import { isRtlLocale } from "../../../../../../lib/sites";
 
-export default function TeamMembers({ data }) {
+export default function TeamMembers({ data, locale = "en" }) {
   const content = data || teamMembersDefaults;
+  const isRtl = isRtlLocale(locale);
   const members = content.items || [];
   const sliderRef = useRef(null);
 
@@ -70,12 +72,16 @@ export default function TeamMembers({ data }) {
 
             <div
               ref={sliderRef}
+              dir="ltr"
               className="flex gap-6 overflow-x-auto pb-3 no-scrollbar snap-x snap-mandatory sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4"
             >
             {members.map((member) => (
               <article
                 key={member.name}
-                className="group w-[85%] shrink-0 snap-start rounded-3xl bg-white border border-main-200/70 overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.05)] sm:w-auto"
+                dir={isRtl ? "rtl" : "ltr"}
+                className={`group w-[85%] shrink-0 snap-start rounded-3xl bg-white border border-main-200/70 overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.05)] sm:w-auto ${
+                  isRtl ? "text-right" : ""
+                }`}
               >
                 <div className="relative aspect-[16/10] bg-main-50">
                   <img

@@ -3,7 +3,11 @@ import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 import { getGeneralSettings } from "../../../../lib/generalSettings";
 import { prisma } from "../../../../lib/prisma";
-import { normalizeSite } from "../../../../lib/sites";
+import {
+  normalizeLocale,
+  normalizeSite,
+  SUPPORTED_LOCALES
+} from "../../../../lib/sites";
 
 const EMAIL_TO_FALLBACK = "bmturkiya@gmail.com";
 
@@ -120,7 +124,9 @@ const detectSite = (page, site) => {
   if (normalized) return normalized;
   const path = String(page || "").toLowerCase();
   if (path.startsWith("/dental-implant")) return "dental-implant";
-  if (path === "/en" || path === "/ru") return "dental-implant";
+  if (SUPPORTED_LOCALES.some((locale) => path === `/${locale}`)) {
+    return "dental-implant";
+  }
   return "dental-implant";
 };
 
@@ -160,8 +166,7 @@ export async function POST(request) {
   }
 
   const site = detectSite(cleaned.page, cleaned.site);
-  const locale =
-    String(cleaned.locale || "").toLowerCase() === "ru" ? "ru" : "en";
+  const locale = normalizeLocale(cleaned.locale || "en");
   const source = cleaned.source || "website";
   const isSpin = source === "lucky-spin" || Boolean(cleaned.prize);
   const subject = `New form submission (${source})`;

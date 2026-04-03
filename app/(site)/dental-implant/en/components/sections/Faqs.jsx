@@ -11,7 +11,7 @@ import {
 } from "../../../../../../lib/pageLinks";
 import PhoneField from "../../../../components/PhoneField";
 
-export default function Faqs({ data }) {
+export default function Faqs({ data, showPrivacyConsent = true }) {
   const content = data || faqsDefaults;
   const faqItems = content.items || [];
   const form = content.form || {};
@@ -345,14 +345,16 @@ export default function Faqs({ data }) {
 
                     {form.privacyNote}
                   </span>
-                  <p className="mt-2 text-[12px] text-main-500">
-                    <a
-                      href={privacyLink}
-                      className="underline decoration-main-400/70 underline-offset-4 hover:text-main-700"
-                    >
-                      {privacyText}
-                    </a>
-                  </p>
+                  {showPrivacyConsent ? (
+                    <p className="mt-2 text-[12px] text-main-500">
+                      <a
+                        href={privacyLink}
+                        className="underline decoration-main-400/70 underline-offset-4 hover:text-main-700"
+                      >
+                        {privacyText}
+                      </a>
+                    </p>
+                  ) : null}
                 </div>
               </form>
             </div>

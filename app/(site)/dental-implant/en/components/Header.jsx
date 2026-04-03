@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 
 import { DEFAULT_GENERAL_SETTINGS } from "../../../../../lib/generalSettings";
+import { getLocaleUi } from "../../../../../lib/localeCopy";
 import LocaleDropdown from "./LocaleDropdown";
+import WhatsAppCta from "./WhatsAppCta";
 
 export default function Header({ general, locale = "en" }) {
   const settings = general || DEFAULT_GENERAL_SETTINGS;
@@ -20,13 +22,8 @@ export default function Header({ general, locale = "en" }) {
   const instagramLink = settings.social?.instagram || "#";
   const facebookLink = settings.social?.facebook || "#";
   const youtubeLink = settings.social?.youtube || "#";
-  const localeToggleHref = locale === "ru" ? "/en" : "/ru";
-  const localeLabel = locale === "ru" ? "🇬🇧 EN" : "🇷🇺 RU";
-  const bookLabel = locale === "ru" ? "Записаться" : "Book Consultation";
-  const handleConsultationOpen = () => {
-    if (typeof window === "undefined") return;
-    window.dispatchEvent(new CustomEvent("open-book-consultation"));
-  };
+  const uiCopy = getLocaleUi(locale);
+  const bookLabel = uiCopy.header.bookConsultation;
 
   useEffect(() => {
     const headerEl = document.getElementById("siteHeader");
@@ -106,7 +103,7 @@ export default function Header({ general, locale = "en" }) {
             <div className="flex items-center gap-3 text-slate-700">
               <div className="hidden lg:flex flex-col items-end text-[12px] leading-tight">
                 <span className="uppercase tracking-[0.16em] text-slate-400">
-                  {locale === "ru" ? "Позвонить" : "Call Us"}
+                  {uiCopy.common.callUs}
                 </span>
                 <a
                   href={phoneLink}
@@ -128,13 +125,13 @@ export default function Header({ general, locale = "en" }) {
             </div>
 
             <div className="flex items-center gap-2">
-              <button
-                type="button"
+              <WhatsAppCta
+                href={whatsappLink}
+                ariaLabel={bookLabel}
                 className="rounded-xl bg-gradient-to-r from-copper-700 via-copper-600 to-copper-500 font-normal uppercase text-white shadow-[0_10px_30px_rgba(0,0,0,0.16)] hover:from-copper-800 hover:via-copper-700 hover:to-copper-500 hover:shadow-[0_12px_36px_rgba(0,0,0,0.18)] active:scale-[0.97] !py-2 sm:!py-2 !px-3 sm:!px-4 !text-[11px] sm:!text-[12px] !tracking-[0.01em] sm:!tracking-[0.20em] inline-flex items-center justify-center cursor-pointer transition-transform duration-200 ease-out disabled:opacity-60 disabled:pointer-events-none"
-                onClick={handleConsultationOpen}
               >
-                {bookLabel}
-              </button>
+                <span>{bookLabel}</span>
+              </WhatsAppCta>
               <LocaleDropdown locale={locale} />
             </div>
           </div>

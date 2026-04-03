@@ -11,7 +11,10 @@ import {
 } from "../../../../../../lib/pageLinks";
 import PhoneField from "../../../../components/PhoneField";
 
-export default function BookAppointmentFormSec2({ data }) {
+export default function BookAppointmentFormSec2({
+  data,
+  showPrivacyConsent = true
+}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fieldErrors, setFieldErrors] = useState({});
   const [phoneValue, setPhoneValue] = useState("");
@@ -119,14 +122,16 @@ export default function BookAppointmentFormSec2({ data }) {
 
               {content.privacyNote}
             </span>
-            <p className="mt-2 text-[12px] text-gray-300">
-              <a
-                href={privacyLink}
-                className="underline decoration-white/50 underline-offset-4 hover:text-white"
-              >
-                {privacyText}
-              </a>
-            </p>
+            {showPrivacyConsent ? (
+              <p className="mt-2 text-[12px] text-gray-300">
+                <a
+                  href={privacyLink}
+                  className="underline decoration-white/50 underline-offset-4 hover:text-white"
+                >
+                  {privacyText}
+                </a>
+              </p>
+            ) : null}
           </div>
 
           <div className="flex-1 space-y-3">

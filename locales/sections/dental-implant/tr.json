@@ -1,0 +1,750 @@
+{
+  "hero": {
+    "videoUrl": "/img/general/tan%C4%B1t%C4%B1m.mp4",
+    "kicker": "Istanbul • Türkiye",
+    "titleLine1": "Türkiye'de Diş Implantları",
+    "titleLine2": "BM TURKIYE ile",
+    "subtitle": "Istanbul'un kalbinde ileri implantoloji, uygun vakalarda anında yükleme ve uzun ömürlü restorasyonlar.",
+    "whatsappCta": "WhatsApp Implant Planı →",
+    "form": {
+      "kicker": "İmplant danışmanlığı talep edin",
+      "title": "İmplant değerlendirmenizi başlatın",
+      "description": "Eksik dişlerinizi veya implant ihtiyacınızı paylaşın. Koordinatörlerimiz sizi kısa sürede arayacaktır.",
+      "privacyNote": "Bilgileriniz gizli kalır.",
+      "submittingText": "GÖNDERİLİYOR...",
+      "submitText": "TALEP GÖNDER",
+      "fields": {
+        "fullNameLabel": "Ad Soyad",
+        "fullNamePlaceholder": "Ad Soyad",
+        "phoneLabel": "Telefon",
+        "phonePlaceholder": "+90 5xx xxx xx xx",
+        "emailLabel": "E-posta",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Mesaj (opsiyonel)",
+        "messagePlaceholder": "Eksik diş, protez veya implant hedefinizi yazın."
+      }
+    }
+  },
+  "dentalImplant": {
+    "headingLine1": "Implantoloji ve",
+    "headingLine2": "Tam Cene Uzmanlığı",
+    "paragraphs": [
+      "BM TURKIYE'de yönlendirilmiş implant cerrahisi, uygun vakalarda anında yükleme ve hassas protez çözümleri ile güven veren gülüşler inşa ediyoruz.",
+      "Tek diş implantlarından All-on-4 / All-on-6 tam çene rehabilitasyonlarına kadar ekibimiz uzun ömür, çiğneme konforu ve doğal estetik üzerine odaklanır."
+    ],
+    "buttonText": "Implant Fiyatı Al →",
+    "mainImage": "/uploads/dental-implant/smile1.jpg",
+    "mainImageAlt": "Implant tedavisi sonucu",
+    "detailImage": "/uploads/dental-implant/smile2.jpg",
+    "detailImageAlt": "Implant üstü restorasyon detayı"
+  },
+  "popularTreatments": {
+    "kicker": "Implant Çözümleri",
+    "title": "En Çok Tercih Edilen Uygulamalar",
+    "description": "Stabilite, hızlı iyileşme ve doğal görünümlü protezler için planlanan implant tedavileri.",
+    "ctaText": "Vakamı Değerlendir →",
+    "ctaHref": "https://wa.me/+905465266449",
+    "items": [
+      {
+        "title": "All-on-4 / All-on-6",
+        "description": "Rehberli cerrahi ve uygun vakalarda geçici sabit köprü ile tam çene sabit implant çözümleri.",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg",
+        "alt": "All-on-4 diş implantları"
+      },
+      {
+        "title": "Tek ve Çoklu Implantlar",
+        "description": "Bir veya birden fazla eksik dişi hassas implant yerleşimi ve kişiye özel kronlarla tamamlayın.",
+        "image": "/uploads/dental-implant/smile3.jpg",
+        "alt": "Tek diş implantı"
+      },
+      {
+        "title": "Implant Destekli Köprüler",
+        "description": "Çiğneme gücünü ve doğal diş formunu geri kazandıran hijyenik ve stabil köprüler.",
+        "image": "/uploads/dental-implant/zirkonyum-veneers.jpg",
+        "alt": "Implant destekli köprü"
+      },
+      {
+        "title": "Kemik Grefti ve Sinüs Lift",
+        "description": "Kemik hacmini güçlendirmek için augmentasyon, sinüs lift ve PRF destekli iyileşme protokolleri.",
+        "image": "/uploads/dental-implant/sec-veneers.jpg",
+        "alt": "Implant için kemik grefti"
+      }
+    ]
+  },
+  "bookAppointmentPrimary": {
+    "backgroundImage": "/uploads/clinic/clinic-1.jpeg",
+    "kicker": "Randevu Talebi",
+    "title": "İmplant danışmanlığınızı planlayın",
+    "description": "Eksik diş, protez veya implant hedefinizi paylaşın. Ekibimiz sizi kısa sürede arayacaktır.",
+    "privacyNote": "Bilgileriniz gizli kalır.",
+    "submittingText": "GÖNDERİLİYOR...",
+    "submitText": "TALEP GÖNDER",
+    "fields": {
+      "fullNameLabel": "Ad Soyad",
+      "fullNamePlaceholder": "Ad Soyad",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "+90 5xx xxx xx xx",
+      "emailLabel": "E-posta",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Mesaj (opsiyonel)",
+      "messagePlaceholder": "Gülüş hedefinizi kısaca yazın."
+    }
+  },
+  "beforeAfter": {
+    "titleLine1": "Implant Merkezi",
+    "titleLine2": "Istanbul, Türkiye",
+    "bullets": [
+      {
+        "prefix": "",
+        "highlight": "12.000+ implant",
+        "suffix": " uygulaması"
+      },
+      {
+        "prefix": "",
+        "highlight": "4.500+ tam çene",
+        "suffix": " restorasyonu"
+      },
+      {
+        "prefix": "",
+        "highlight": "Dijital planlama",
+        "suffix": " ve rehberli cerrahi"
+      },
+      {
+        "prefix": "",
+        "highlight": "Hafta sonu ve akşam randevuları",
+        "suffix": " isteğe bağlı"
+      }
+    ],
+    "ctaText": "Implant Danışmanlığı →",
+    "cases": [
+      {
+        "image": "/uploads/ba3.jpg",
+        "caption": "Anında yüklemeli tam çene implant köprüsü."
+      },
+      {
+        "image": "/uploads/ba2.jpg",
+        "caption": "Doğal dişlerle uyumlu tek implant kron."
+      },
+      {
+        "image": "/uploads/ba4.jpg",
+        "caption": "Üst ve alt çenede fonksiyonel implant rehabilitasyonu."
+      },
+      {
+        "image": "/uploads/ba13.jpg",
+        "caption": "Birden fazla eksik diş için implant destekli köprü."
+      },
+      {
+        "image": "/uploads/ba6.jpg",
+        "caption": "Implantlarla ısırış ve estetik restorasyonu."
+      }
+    ]
+  },
+  "certificatesGallery": {
+    "kicker": "Sertifikalar",
+    "title": "Sertifika Galerisi",
+    "description": "Kalite standartlarımızı yansıtan resmi sertifikalar ve belgeler.",
+    "items": [
+      {
+        "image": "/uploads/ba2.jpg",
+        "alt": "Sertifika 1"
+      },
+      {
+        "image": "/uploads/ba3.jpg",
+        "alt": "Sertifika 2"
+      },
+      {
+        "image": "/uploads/ba4.jpg",
+        "alt": "Sertifika 3"
+      },
+      {
+        "image": "/uploads/ba6.jpg",
+        "alt": "Sertifika 4"
+      }
+    ]
+  },
+  "fullWidthCampaign": {
+    "backgroundImage": "/uploads/air.jpg",
+    "backgroundAlt": "Diş implantı seyahat kampanyası",
+    "overlayImage": "/uploads/dental-implant/smile3.jpg",
+    "overlayAlt": "Implant tedavisi öne çıkan vaka",
+    "badge": "Diş Implantı",
+    "headingLine1": "Tam Çene",
+    "headingLine2": "Uçak Kampanyası",
+    "description": "Uygun All-on-4 / All-on-6 tedavilerinde gidiş-dönüş uçak bileti avantajı."
+  },
+  "stepForm": {
+    "image": "/uploads/dental-implant/step-form-image.jpg",
+    "imageAlt": "Dental implant planning",
+    "kicker": "Hızlı Vaka Kontrolü",
+    "title": "Ücretsiz Implant Analizi",
+    "progressLabel": "İlerleme",
+    "stepLabel": "Adım",
+    "totalSteps": 3,
+    "selectedLabel": "Seçilen:",
+    "steps": {
+      "step1Title": "Vaka Tipini Seçin",
+      "step1Description": "Doğru implant yaklaşımını belirleyebilmemiz için ihtiyacınızı seçin.",
+      "step2Title": "Tercih Edilen Çözüm",
+      "step2Description": "Hedefinize en uygun seçeneği işaretleyin. Nihai plan muayene sonrası netleşir.",
+      "step3Title": "Bilgilerinizi Paylaşın",
+      "step3Description": "Bilgilerinizi bırakın, koordinatörlerimiz inceleyip sizi arayacaktır.",
+      "privacyNote": "Bilgileriniz gizli kalır."
+    },
+    "genderOptions": [
+      {
+        "value": "single",
+        "label": "Tek / Az Sayıda Diş",
+        "helper": "Vaka Tipi",
+        "icon": "fa-tooth"
+      },
+      {
+        "value": "full-arch",
+        "label": "Tam Çene / All-on-X",
+        "helper": "Vaka Tipi",
+        "icon": "fa-teeth-open"
+      },
+      {
+        "value": "denture",
+        "label": "Hareketli Protez",
+        "helper": "Vaka Tipi",
+        "icon": "fa-face-smile"
+      }
+    ],
+    "toothOptions": [
+      {
+        "key": "single-implant",
+        "label": "Tek Implant",
+        "image": "/uploads/dental-implant/smile1.jpg"
+      },
+      {
+        "key": "implant-bridge",
+        "label": "Implant Köprü",
+        "image": "/uploads/dental-implant/zirkonyum-veneers.jpg"
+      },
+      {
+        "key": "all-on-4",
+        "label": "All-on-4",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg"
+      },
+      {
+        "key": "all-on-6",
+        "label": "All-on-6",
+        "image": "/uploads/dental-implant/smile3.jpg"
+      },
+      {
+        "key": "bone-graft",
+        "label": "Kemik Grefti / Sinüs",
+        "image": "/uploads/dental-implant/sec-veneers.jpg"
+      }
+    ],
+    "fields": {
+      "fullNameLabel": "Ad Soyad",
+      "fullNamePlaceholder": "Ad Soyad",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "+90 5xx xxx xx xx"
+    },
+    "prevLabel": "Geri",
+    "nextLabel": "İleri",
+    "submitLabel": "Talep Gönder"
+  },
+  "treatments": {
+    "kicker": "Implant Tedavileri",
+    "titleLine1": "Diş Implantı,",
+    "titleLine2": "Tam Çene ve Tek Diş",
+    "description": "Çiğneme gücünü ve özgüveni geri kazandıran sabit implant çözümleri. Rehberli cerrahi ve kişiye özel protezler.",
+    "highlights": [
+      "Uygun vakalarda anında veya erken yükleme",
+      "3D rehberli planlama",
+      "Kişiye özel zirkonyum veya porselen köprüler"
+    ],
+    "noteLabel": "Hızlı Not",
+    "noteText": "Kesin uygunluk CBCT ve klinik değerlendirme sonrası netleşir.",
+    "galleryLabel": "Restorasyonları Gör",
+    "galleryHref": "/dental-implant/tr/gallery",
+    "ctaText": "Implant Değerlendirmesi →",
+    "mediaItems": [
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "DWjaF4lDca8",
+        "poster": "/reels/DWjaF4lDca8.jpg",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "b285Dt47ipQ",
+        "poster": "/reels/b285Dt47ipQ.avif",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "Ht_YQEh9Gwo",
+        "poster": "/reels/Ht_YQEh9Gwo.avif",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "Ev7R2x0UCZo",
+        "poster": "/reels/Ev7R2x0UCZo.avif",
+        "aspect": "9/16"
+      }
+    ]
+  },
+  "bookAppointmentSecondary": {
+    "backgroundImage": "/uploads/clinic/clinic-1.jpeg",
+    "kicker": "Randevu Talebi",
+    "title": "İmplant danışmanlığınızı planlayın",
+    "description": "Eksik diş, protez veya implant hedefinizi paylaşın. Ekibimiz sizi kısa sürede arayacaktır.",
+    "privacyNote": "Bilgileriniz gizli kalır.",
+    "submittingText": "GÖNDERİLİYOR...",
+    "submitText": "TALEP GÖNDER",
+    "fields": {
+      "fullNameLabel": "Ad Soyad",
+      "fullNamePlaceholder": "Ad Soyad",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "+90 5xx xxx xx xx",
+      "emailLabel": "E-posta",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Mesaj (opsiyonel)",
+      "messagePlaceholder": "Gülüş hedefinizi kısaca yazın."
+    }
+  },
+  "internationalPatients": {
+    "backgroundImage": "/uploads/general/istanbul.jpg",
+    "backgroundAlt": "Istanbul",
+    "kicker": "• Istanbul • Sağlık Turizmi •",
+    "titleLine1": "BM TURKIYE",
+    "titleLine2": "Uluslararası Hasta Programı",
+    "description": "Yurt dışından gelen hastalar için güvenli, konforlu ve kişiye özel bir implant tedavi süreci sunuyoruz. Uzman hekimlerimiz, modern teknolojimiz ve hasta koordinatörlerimizle Istanbul yolculuğunuzu sorunsuz hale getiriyoruz.",
+    "buttonText": "Konsültasyon Al >"
+  },
+  "teamMembers": {
+    "kicker": "Ekip",
+    "title": "Her gülüşün arkasındaki uzmanlarla tanışın",
+    "description": "Doğal ve güven veren sonuçlar için çalışan çok disiplinli bir diş hekimliği ve koordinasyon ekibi.",
+    "items": [
+      {
+        "name": "Dr. Selin A.",
+        "role": "Baş Estetik Diş Hekimi",
+        "description": "Doğal veneerler, gülüş tasarımı ve minimal invaziv çözümler odaklı 12+ yıllık deneyim.",
+        "image": "/uploads/team/dr-selin.jpg",
+        "alt": "Dr. Selin"
+      },
+      {
+        "name": "Dr. Emir K.",
+        "role": "Implantoloji ve Protetik",
+        "description": "Tam ağız rehabilitasyonları, ileri implant planlama ve dijital iş akışları ile fonksiyonel restorasyonlar.",
+        "image": "/uploads/team/dr-emir.jpg",
+        "alt": "Dr. Emir"
+      },
+      {
+        "name": "Elif T.",
+        "role": "Hasta Koordinatörü",
+        "description": "Uluslararası hastalara ilk görüşmeden bakım sonrasına kadar sürecin her adımında rehberlik eder.",
+        "image": "/uploads/team/elif.jpg",
+        "alt": "Elif"
+      },
+      {
+        "name": "Mert C.",
+        "role": "Klinik Asistanı",
+        "description": "Klinik akışın düzenli, güvenli ve zamanında ilerlemesini destekler.",
+        "image": "/uploads/team/mert.jpg",
+        "alt": "Mert"
+      }
+    ]
+  },
+  "clinic": {
+    "images": [
+      {
+        "src": "/uploads/clinic/clinic-1.jpeg",
+        "alt": "Clinic moment 1"
+      },
+      {
+        "src": "/uploads/clinic/clinic-2.jpeg",
+        "alt": "Clinic moment 2"
+      },
+      {
+        "src": "/uploads/clinic/clinic-3.jpeg",
+        "alt": "Clinic moment 3"
+      },
+      {
+        "src": "/uploads/clinic/clinic-4.jpeg",
+        "alt": "Clinic moment 4"
+      },
+      {
+        "src": "/uploads/clinic/clinic-6.jpeg",
+        "alt": "Clinic moment 5"
+      },
+      {
+        "src": "/uploads/clinic/clinic-7.jpeg",
+        "alt": "Clinic moment 6"
+      }
+    ],
+    "kicker": "Istanbul • Türkiye",
+    "titleLine1": "Ödüllü",
+    "titleLine2": "Gülüşlerin Adresi",
+    "paragraphs": [
+      "Uzun yıllardır ekibimiz Türkiye'den, Avrupa'dan ve dünyanın farklı ülkelerinden gelen hastalar için doğal ve uzun ömürlü gülüşler tasarlamaktadır. Her plan minimal invaziv teknikler ve ileri dijital planlamayla kişiye özel hazırlanır.",
+      "Kişiye özel yaklaşımımız, detaylara gösterdiğimiz özen ve yüzünüzle uyumlu sonuçlara olan bağlılığımızla gurur duyuyoruz."
+    ],
+    "ctaText": "WhatsApp Danışmanlığı →"
+  },
+  "healthTourism": {
+    "kicker": "4 kolay adım",
+    "title": "Yeni Gülüşünüze Giden Yol",
+    "description": "İlk mesajdan son kontrole kadar ekibimiz implant yolculuğunuzu sorunsuz biçimde yönetir.",
+    "steps": [
+      {
+        "icon": "fa-comments",
+        "label": "ADIM 1",
+        "title": "Vakanızı bize anlatın",
+        "description": "Eksik dişlerinizi, mevcut protezlerinizi, fotoğraflarınızı ve varsa röntgenlerinizi paylaşın. Ekibimiz ihtiyacınızı dikkatle inceler."
+      },
+      {
+        "icon": "fa-clipboard-list",
+        "label": "ADIM 2",
+        "title": "Plan ve şeffaf fiyatlama",
+        "description": "24 saat içinde doktorlarımız size özel implant planını, süreyi ve net fiyat bilgisini hazırlar."
+      },
+      {
+        "icon": "fa-plane-departure",
+        "label": "ADIM 3",
+        "title": "Seyahat ve implant cerrahisi",
+        "description": "Tarihleri netleştirdikten sonra havalimanı karşılama, otel seçenekleri ve klinik randevularınızı planlarız."
+      },
+      {
+        "icon": "fa-check-circle",
+        "label": "ADIM 4",
+        "title": "Son kontrol ve bakım planı",
+        "description": "Ülkenize dönmeden önce son kontroller yapılır, bakım önerileri paylaşılır ve uzaktan takip planlanır."
+      }
+    ]
+  },
+  "luckySpin": {
+    "backgroundImage": "/uploads/spin-bg-bottom.png",
+    "backgroundAlt": "",
+    "kicker": "Şans Çarkı",
+    "tagline": "Döndür ve Kazan",
+    "title": "Şansını Dene",
+    "description": "İndirim kuponu kazanmak için çarkı döndürün.",
+    "spinLabel": "Şimdi Döndür",
+    "spinLoadingLabel": "Dönüyor...",
+    "resultLabel": "Kazandığınız",
+    "resultPlaceholder": "Ödülünüzü görmek için çarkı çevirin.",
+    "prizes": [
+      "%20 İndirim",
+      "$75 İndirim",
+      "%10 İndirim",
+      "%50 Uçak Bileti",
+      "$50 İndirim",
+      "$100 İndirim",
+      "%15 İndirim",
+      "$150 İndirim"
+    ],
+    "form": {
+      "title": "Ödülünüzü alın",
+      "description": "Teklifinizi almak için bilgilerinizi girin.",
+      "fields": {
+        "fullNameLabel": "Ad Soyad",
+        "fullNamePlaceholder": "Ad Soyad",
+        "phoneLabel": "Telefon",
+        "phonePlaceholder": "+90 5xx xxx xx xx"
+      },
+      "submitText": "Talep Gönder",
+      "privacyNote": "Bilgileriniz gizli kalır."
+    }
+  },
+  "implantMatrix": {
+    "kicker": "Tedavi Matrisi",
+    "title": "Implant Seçenekleri Kısa Karşılaştırma",
+    "description": "En çok tercih edilen implant çözümlerimizi, ideal adayları, Türkiye'deki süreyi ve beklenen sonucu karşılaştırın. Nihai plan muayene sonrası netleşir.",
+    "columns": [
+      "Teknik",
+      "Tip",
+      "İdeal Aday",
+      "Avantajlar",
+      "Dezavantajlar",
+      "Türkiye'de Süre",
+      "Sonuç"
+    ],
+    "rows": [
+      {
+        "technique": "Tek Dis Implantı",
+        "type": "Titanyum kok + kron",
+        "candidates": "1-3 eksik dis",
+        "advantages": "Dogal his, bagimsiz destek",
+        "disadvantages": "Kucuk cerrahi islem, iyilesme suresi",
+        "timeInTurkey": "5-7 gun + iyilesme",
+        "results": "Dogru bakimla uzun omurlu",
+        "values": [
+          "Tek Dis Implantı",
+          "Titanyum kok + kron",
+          "1-3 eksik dis",
+          "Dogal his, bagimsiz destek",
+          "Kucuk cerrahi islem, iyilesme suresi",
+          "5-7 gun + iyilesme",
+          "Dogru bakimla uzun omurlu"
+        ]
+      },
+      {
+        "technique": "All-on-4 / All-on-6",
+        "type": "Implant ustu tam cene protezi",
+        "candidates": "Tam dissizlik veya ileri hasarli disler",
+        "advantages": "Sabit, guclu ve tam dis dizisi",
+        "disadvantages": "Iyilesme sureci gerekir",
+        "timeInTurkey": "7-10 gun",
+        "results": "Yuksek stabiliteli tam cene gulus",
+        "values": [
+          "All-on-4 / All-on-6",
+          "Implant ustu tam cene protezi",
+          "Tam dissizlik veya ileri hasarli disler",
+          "Sabit, guclu ve tam dis dizisi",
+          "Iyilesme sureci gerekir",
+          "7-10 gun",
+          "Yuksek stabiliteli tam cene gulus"
+        ]
+      },
+      {
+        "technique": "Zirkonyum Implant Kronlari",
+        "type": "Implant ustu seramik kron",
+        "candidates": "Estetik bolgeler",
+        "advantages": "Yuksek estetik, metalsiz",
+        "disadvantages": "Daha yuksek maliyet",
+        "timeInTurkey": "5-7 gun",
+        "results": "Dogal gorunum, guclu isirma",
+        "values": [
+          "Zirkonyum Implant Kronlari",
+          "Implant ustu seramik kron",
+          "Estetik bolgeler",
+          "Yuksek estetik, metalsiz",
+          "Daha yuksek maliyet",
+          "5-7 gun",
+          "Dogal gorunum, guclu isirma"
+        ]
+      },
+      {
+        "technique": "Kemik Grefti",
+        "type": "Greft materyali + iyilesme",
+        "candidates": "Cene kemigi kaybi olan hastalar",
+        "advantages": "Zor vakalarda implanta imkan tanir",
+        "disadvantages": "Iyilesme suresi gerekir",
+        "timeInTurkey": "1-2 gun (+ iyilesme)",
+        "results": "Implantlar icin guclu temel",
+        "values": [
+          "Kemik Grefti",
+          "Greft materyali + iyilesme",
+          "Cene kemigi kaybi olan hastalar",
+          "Zor vakalarda implanta imkan tanir",
+          "Iyilesme suresi gerekir",
+          "1-2 gun (+ iyilesme)",
+          "Implantlar icin guclu temel"
+        ]
+      },
+      {
+        "technique": "Aninda Implant",
+        "type": "Cekim + implant + gecici dis",
+        "candidates": "Saglikli kemik yapisina sahip uygun hastalar",
+        "advantages": "Bekleme yok, hizli gulus",
+        "disadvantages": "Herkes icin uygun degil",
+        "timeInTurkey": "1-2 gun",
+        "results": "Hizli estetik ve uzun vadeli cozum",
+        "values": [
+          "Aninda Implant",
+          "Cekim + implant + gecici dis",
+          "Saglikli kemik yapisina sahip uygun hastalar",
+          "Bekleme yok, hizli gulus",
+          "Herkes icin uygun degil",
+          "1-2 gun",
+          "Hizli estetik ve uzun vadeli cozum"
+        ]
+      },
+      {
+        "technique": "Dijital Implant Planlama",
+        "type": "3D goruntuleme + rehberli cerrahi",
+        "candidates": "Tum implant hastalari",
+        "advantages": "Guvenli, hassas, daha az invaziv",
+        "disadvantages": "Ek planlama asamasi",
+        "timeInTurkey": "Ayni gun",
+        "results": "Hassas implant yerlestirme",
+        "values": [
+          "Dijital Implant Planlama",
+          "3D goruntuleme + rehberli cerrahi",
+          "Tum implant hastalari",
+          "Guvenli, hassas, daha az invaziv",
+          "Ek planlama asamasi",
+          "Ayni gun",
+          "Hassas implant yerlestirme"
+        ]
+      }
+    ]
+  },
+  "techniquesUsed": {
+    "kicker": "Kullanılan Teknikler",
+    "title": "Uyguladığımız ileri implant yöntemleri",
+    "description": "Anında implanttan rehberli cerrahiye kadar doğal ve stabil sonuçlar için kullandığımız temel teknikler.",
+    "slides": [
+      {
+        "title": "Anında Implantlar",
+        "body": "Uygun hastalarda çekim ve implant yerleştirme aynı seansta yapılabilir ve geçici kron eklenebilir. Bu sayede tedavi süresi kısalır.",
+        "image": "/uploads/dental-implant/smile2.jpg"
+      },
+      {
+        "title": "All-on-4 / All-on-6",
+        "body": "4-6 implant üzerinde tam çene rehabilitasyonu; uygun vakalarda geçici sabit köprü ile hızlı fonksiyon ve estetik dönüş sağlar.",
+        "image": "/uploads/dental-implant/smile3.jpg"
+      },
+      {
+        "title": "Rehberli Cerrahi",
+        "body": "3D görüntüleme ve cerrahi kılavuzlarla daha güvenli, hassas ve öngörülebilir implant yerleşimi sağlanır.",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg"
+      }
+    ]
+  },
+  "googleReviews": {
+    "kicker": "Google Yorumları",
+    "title": "Gerçek Hasta Deneyimleri",
+    "description": "Uluslararası hastaların BM TURKIYE deneyimi hakkında söylediklerinden kısa bir seçki.",
+    "rating": "4.9",
+    "ratingCountLabel": "380+ Yorum",
+    "ctaText": "Ücretsiz Danışma →",
+    "items": [
+      {
+        "initials": "MM",
+        "name": "Matthew",
+        "text": "Ilk WhatsApp mesajindan son kontrole kadar tum implant sureci son derece akiciydi. Ekip her adimi net sekilde anlatti, zamanlamayi iyi yonetti ve kendimi gercekten guvende hissettirdi. Yeni implant koprum cok dogal gorunuyor ve aylar sonra bile cigneme hissi oldukca rahat.",
+        "count": "57 Yorum"
+      },
+      {
+        "initials": "SS",
+        "name": "Sophie",
+        "text": "Cok profesyonel bir ekip ve harika bir klinik. Kendimi guvende ve iyi bilgilendirilmis hissettim; sonuc beklentimin ustunde oldu.",
+        "count": "12 Yorum"
+      },
+      {
+        "initials": "HH",
+        "name": "Helen",
+        "text": "Planlama ve iletisim harikaydi. Her sey zamaninda ilerledi ve bakim talimatlari son derece acikti.",
+        "count": "4 Yorum"
+      },
+      {
+        "initials": "DD",
+        "name": "Daniel",
+        "text": "Surec cok seffafti. Ne yapilacagini ve ne kadar surecegini en bastan biliyordum. Sonuc hem dogal hem de konforlu.",
+        "count": "23 Yorum"
+      },
+      {
+        "initials": "EE",
+        "name": "Emily",
+        "text": "Benim icin en onemlisi dogal gorunen dislerdi ve ekip bunu tam olarak basardi. Implant kronlarinin rengi ve formu yuzume cok iyi uydu.",
+        "count": "9 Yorum"
+      },
+      {
+        "initials": "OO",
+        "name": "Oliver",
+        "text": "Klinik cok temizdi ve ekip son derece ilgiliydi. Bakim sonrasi destek de cok iyiydi; soru sordugumda hizli sekilde donus yaptilar.",
+        "count": "31 Yorum"
+      }
+    ]
+  },
+  "trustpilotReviews": {
+    "kicker": "Trustpilot Yorumları",
+    "title": "Gerçek Hasta Deneyimleri",
+    "description": "Uluslararası hastaların BM TURKIYE deneyimi hakkında söylediklerinden kısa bir seçki.",
+    "rating": "4.9",
+    "ratingCountLabel": "380+ Yorum",
+    "ctaText": "Ücretsiz Danışma →",
+    "items": [
+      {
+        "initials": "MM",
+        "name": "Matthew",
+        "text": "Ilk WhatsApp mesajindan son kontrole kadar tum implant sureci son derece akiciydi. Ekip her adimi net sekilde anlatti, zamanlamayi iyi yonetti ve kendimi gercekten guvende hissettirdi. Yeni implant koprum cok dogal gorunuyor ve aylar sonra bile cigneme hissi oldukca rahat.",
+        "count": "57 Yorum"
+      },
+      {
+        "initials": "SS",
+        "name": "Sophie",
+        "text": "Cok profesyonel bir ekip ve harika bir klinik. Kendimi guvende ve iyi bilgilendirilmis hissettim; sonuc beklentimin ustunde oldu.",
+        "count": "12 Yorum"
+      },
+      {
+        "initials": "HH",
+        "name": "Helen",
+        "text": "Planlama ve iletisim harikaydi. Her sey zamaninda ilerledi ve bakim talimatlari son derece acikti.",
+        "count": "4 Yorum"
+      },
+      {
+        "initials": "DD",
+        "name": "Daniel",
+        "text": "Surec cok seffafti. Ne yapilacagini ve ne kadar surecegini en bastan biliyordum. Sonuc hem dogal hem de konforlu.",
+        "count": "23 Yorum"
+      },
+      {
+        "initials": "EE",
+        "name": "Emily",
+        "text": "Benim icin en onemlisi dogal gorunen dislerdi ve ekip bunu tam olarak basardi. Implant kronlarinin rengi ve formu yuzume cok iyi uydu.",
+        "count": "9 Yorum"
+      },
+      {
+        "initials": "OO",
+        "name": "Oliver",
+        "text": "Klinik cok temizdi ve ekip son derece ilgiliydi. Bakim sonrasi destek de cok iyiydi; soru sordugumda hizli sekilde donus yaptilar.",
+        "count": "31 Yorum"
+      }
+    ]
+  },
+  "faqs": {
+    "kicker": "Yardım Merkezi",
+    "title": "Dental Implant SSS",
+    "description": "Uluslararası implant hastaları için kısa cevaplar.",
+    "responseTimeLabel": "Ortalama dönüş süresi:",
+    "responseTimeValue": "30 dakika",
+    "footerNote": "Tıbbi uygunluk ve nihai plan klinik değerlendirme sonrası kesinleşir.",
+    "form": {
+      "kicker": "Randevu Talebi",
+      "title": "İmplant danışmanlığınızı planlayın",
+      "description": "Birkaç bilgi paylaşın, ekibimiz sizinle kısa sürede iletişime geçsin.",
+      "submittingText": "GÖNDERİLİYOR...",
+      "submitText": "TALEP GÖNDER",
+      "privacyNote": "Bilgileriniz gizli kalır.",
+      "fields": {
+        "fullNameLabel": "Ad Soyad",
+        "fullNamePlaceholder": "Ad Soyad",
+        "phoneLabel": "Telefon",
+        "phonePlaceholder": "+90 5xx xxx xx xx",
+        "emailLabel": "E-posta",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Mesaj (opsiyonel)",
+        "messagePlaceholder": "Tedavi hedefinizi kısaca anlatın."
+      }
+    },
+    "items": [
+      {
+        "icon": "fa-circle-question",
+        "title": "Implant için kaç gün ayırmalıyım?",
+        "subtitle": "Tam çene vakaları genelde 5-7 gün sürer; aşamalı tedaviler önceden planlanır.",
+        "body": "All-on-4 / All-on-6 vakalarında tanı, cerrahi ve geçici protez genellikle aynı hafta içinde tamamlanır. Kemik grefti gerekiyorsa etaplı bir plan yapılır."
+      },
+      {
+        "icon": "fa-tooth",
+        "title": "Diş implantı ağrılı mıdır?",
+        "subtitle": "Modern anestezi ve rehberli teknikler rahatsızlığı minimumda tutar.",
+        "body": "Çoğu hasta işlem sırasında ağrıdan çok basınç hisseder. Hafif işlem sonrası hassasiyet ilaç ve bakım talimatları ile kolayca yönetilir."
+      },
+      {
+        "icon": "fa-shield-heart",
+        "title": "Garanti ve bakım planı var mı?",
+        "subtitle": "Yazılı bakım önerileri ve ülkenize döndükten sonra uzaktan destek sunulur.",
+        "body": "Kullanılan implant sistemleri için üretici garanti bilgileri, bakım talimatları ve takip önerileri tarafınıza iletilir."
+      },
+      {
+        "icon": "fa-credit-card",
+        "title": "Seyahat etmeden önce fiyat bilgisi alabilir miyim?",
+        "subtitle": "Evet, fotoğraf ve görüntülemeye göre ön plan ve tahmini maliyet paylaşılır.",
+        "body": "Fotoğraflarınızı ve varsa görüntülemelerinizi gönderin; ekibimiz size ilk değerlendirmeyi ve tahmini maliyeti hazırlasın. Nihai fiyat klinik muayene ile netleşir."
+      }
+    ]
+  }
+}

@@ -177,6 +177,7 @@
 
 .phone-field .react-international-phone-input-container {
   width: 100%;
+  direction: ltr;
 }
 
 .phone-field .react-international-phone-country-selector-button {
@@ -188,6 +189,8 @@
 
 .phone-field .react-international-phone-input {
   padding: 0 12px;
+  direction: ltr;
+  text-align: left;
 }
 
 .phone-field .react-international-phone-country-selector-button__flag-emoji {

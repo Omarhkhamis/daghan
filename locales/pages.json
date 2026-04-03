@@ -1,0 +1,56 @@
+{
+  "thankyou": {
+    "en": {
+      "title": "Thank You",
+      "content": "Thank you for trusting our clinic.\n\nWe received your request and are preparing the best plan for you.\n\nA patient coordinator will review your details, call you to confirm the next steps, and share the available time slots.\n\nIf you would like to talk now, use the call or WhatsApp buttons below."
+    },
+    "ru": {
+      "title": "Спасибо",
+      "content": "Спасибо за доверие к нашей клинике.\n\nМы получили ваш запрос и готовим для вас лучший план лечения.\n\nКоординатор по работе с пациентами рассмотрит ваши данные, свяжется с вами по телефону, чтобы подтвердить следующие шаги, и сообщит о доступных временных слотах.\n\nЕсли хотите поговорить сейчас, воспользуйтесь кнопками звонка или WhatsApp ниже."
+    },
+    "tr": {
+      "title": "Tesekkurler",
+      "content": "Klinigimize guvendiginiz icin tesekkur ederiz.\n\nTalebinizi aldik ve sizin icin en uygun tedavi planini hazirliyoruz.\n\nHasta koordinatörümüz bilgilerinizi inceleyecek, sonraki adimlari teyit etmek icin sizi arayacak ve uygun saatleri sizinle paylasacaktir.\n\nHemen gorusmek isterseniz asagidaki arama veya WhatsApp butonlarini kullanabilirsiniz."
+    },
+    "ar": {
+      "title": "شكرًا لك",
+      "content": "شكرًا لثقتك بعيادتنا.\n\nلقد استلمنا طلبك ونعمل الآن على تجهيز أفضل خطة مناسبة لك.\n\nسيقوم منسق المرضى بمراجعة بياناتك والتواصل معك لتأكيد الخطوات القادمة ومواعيد الزيارة المتاحة.\n\nإذا كنت ترغب بالتحدث الآن، يمكنك استخدام أزرار الاتصال أو واتساب في الأسفل."
+    }
+  },
+  "privacy-policy": {
+    "en": {
+      "title": "Privacy Policy",
+      "content": "We value your privacy and are committed to protecting your personal information.\n\nWe only collect data that is necessary to provide our services, improve your experience, and communicate with you when needed.\n\nWe do not sell or share your information with third parties except where required by law or to deliver services you have requested.\n\nYou can request access to your data or ask us to delete it at any time by contacting our support team."
+    },
+    "ru": {
+      "title": "Политика конфиденциальности",
+      "content": "Мы ценим вашу конфиденциальность и обязуемся защищать вашу личную информацию.\n\nМы собираем только те данные, которые необходимы для предоставления услуг, улучшения вашего опыта и связи с вами при необходимости.\n\nМы не продаём и не передаём вашу информацию третьим лицам, кроме случаев, предусмотренных законом или необходимых для оказания запрошенных вами услуг.\n\nВы можете запросить доступ к своим данным или попросить удалить их в любое время, связавшись с нашей службой поддержки."
+    },
+    "tr": {
+      "title": "Gizlilik Politikasi",
+      "content": "Gizliliginize onem veriyor ve kisisel verilerinizi korumayi taahhut ediyoruz.\n\nYalnizca hizmetlerimizi sunmak, deneyiminizi iyilestirmek ve gerektiginde sizinle iletisim kurmak icin gerekli olan verileri toplariz.\n\nBilgilerinizi satmayiz ve yasal zorunluluklar veya talep ettiginiz hizmetleri sunmak disinda ucuncu taraflarla paylasmayiz.\n\nDestek ekibimizle iletisime gecerek verilerinize erisim talep edebilir veya istediginiz zaman silinmesini isteyebilirsiniz."
+    },
+    "ar": {
+      "title": "سياسة الخصوصية",
+      "content": "نحن نقدّر خصوصيتك ونلتزم بحماية معلوماتك الشخصية.\n\nنقوم فقط بجمع البيانات اللازمة لتقديم خدماتنا وتحسين تجربتك والتواصل معك عند الحاجة.\n\nلا نقوم ببيع معلوماتك أو مشاركتها مع أي طرف ثالث إلا عند وجود التزام قانوني أو لتقديم الخدمة التي طلبتها.\n\nيمكنك طلب الوصول إلى بياناتك أو طلب حذفها في أي وقت من خلال التواصل مع فريق الدعم لدينا."
+    }
+  },
+  "terms": {
+    "en": {
+      "title": "Terms",
+      "content": "By using this website, you agree to the following terms and conditions.\n\nAll content is provided for informational purposes only and does not replace professional medical advice.\n\nAppointments, pricing, and treatment plans are confirmed after clinical assessment.\n\nWe reserve the right to update these terms at any time. Continued use of the website indicates your acceptance of any changes."
+    },
+    "ru": {
+      "title": "Условия",
+      "content": "Используя этот сайт, вы соглашаетесь со следующими условиями.\n\nВся информация предоставляется только в ознакомительных целях и не заменяет профессиональную медицинскую консультацию.\n\nЗаписи, стоимость и планы лечения подтверждаются после клинической оценки.\n\nМы оставляем за собой право обновлять эти условия в любое время. Продолжая пользоваться сайтом, вы подтверждаете согласие с изменениями."
+    },
+    "tr": {
+      "title": "Kullanim Sartlari",
+      "content": "Bu web sitesini kullanarak asagidaki sart ve kosullari kabul etmis olursunuz.\n\nTum icerikler yalnizca bilgilendirme amaclidir ve profesyonel tibbi tavsiyenin yerine gecmez.\n\nRandevular, fiyatlar ve tedavi planlari klinik degerlendirmeden sonra netlesir.\n\nBu sartlari istedigimiz zaman guncelleme hakkini sakli tutariz. Siteyi kullanmaya devam etmeniz, degisiklikleri kabul ettiginiz anlamina gelir."
+    },
+    "ar": {
+      "title": "الشروط والأحكام",
+      "content": "باستخدامك لهذا الموقع فإنك توافق على الشروط والأحكام التالية.\n\nجميع المحتويات المعروضة هي لأغراض معلوماتية فقط ولا تُعد بديلاً عن الاستشارة الطبية المتخصصة.\n\nيتم تأكيد المواعيد والأسعار وخطط العلاج بعد التقييم السريري.\n\nنحتفظ بحق تحديث هذه الشروط في أي وقت. ويُعد استمرارك في استخدام الموقع موافقة على أي تعديلات لاحقة."
+    }
+  }
+}

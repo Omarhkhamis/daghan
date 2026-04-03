@@ -2,14 +2,11 @@
 
 import { heroDefaults } from "../../../../../../lib/sectionDefaults";
 import ConsultationFormCard from "../ConsultationFormCard";
+import WhatsAppCta from "../WhatsAppCta";
 
-export default function HeroSlide({ data, whatsappLink }) {
+export default function HeroSlide({ data, whatsappLink, showPrivacyConsent }) {
   const content = data || heroDefaults;
   const form = content.form;
-  const handleConsultationOpen = () => {
-    if (typeof window === "undefined") return;
-    window.dispatchEvent(new CustomEvent("open-book-consultation"));
-  };
 
   return (
     <section className="relative pt-42 pb-20  h-auto  overflow-hidden bg-main-900">
@@ -48,13 +45,13 @@ export default function HeroSlide({ data, whatsappLink }) {
               </p>
 
               <div className=" hidden sm:flex flex-wrap items-center gap-4">
-                <button
-                  type="button"
+                <WhatsAppCta
+                  href={whatsappLink}
+                  ariaLabel={content.whatsappCta}
                   className="rounded-xl bg-gradient-to-r from-copper-600 to-copper-500 text-white shadow-[0_10px_10px_rgba(0,0,0,0.09)] hover:from-copper-700 hover:to-copper-500 px-4 py-3 text-[11.5px] font-medium uppercase tracking-[0.13em] inline-flex items-center justify-center cursor-pointer transition-transform duration-200 ease-out disabled:opacity-60 disabled:pointer-events-none"
-                  onClick={handleConsultationOpen}
                 >
-                  {content.whatsappCta}
-                </button>
+                  <span>{content.whatsappCta}</span>
+                </WhatsAppCta>
               </div>
             </div>
 
@@ -63,6 +60,7 @@ export default function HeroSlide({ data, whatsappLink }) {
                 form={form}
                 idPrefix="hero"
                 className="w-full lg:max-w-md"
+                showPrivacyConsent={showPrivacyConsent}
               />
             </div>
           </div>

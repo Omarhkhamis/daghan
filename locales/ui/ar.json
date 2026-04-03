@@ -1,0 +1,61 @@
+{
+  "common": {
+    "ok": "حسنًا",
+    "close": "إغلاق",
+    "previous": "السابق",
+    "next": "التالي",
+    "previousSlide": "الشريحة السابقة",
+    "nextSlide": "الشريحة التالية",
+    "call": "اتصال",
+    "callUs": "اتصل بنا",
+    "whatsapp": "واتساب",
+    "verified": "موثّق",
+    "hoverToReadMore": "مرر لقراءة المزيد",
+    "requestReceived": "تم استلام طلبك"
+  },
+  "header": {
+    "bookConsultation": "احجز استشارة"
+  },
+  "overlays": {
+    "freeConsultation": "استشارة مجانية",
+    "free": "مجانية",
+    "consultation": "استشارة",
+    "openLuckySpin": "افتح عجلة الحظ",
+    "tryChance": "جرّب حظك!"
+  },
+  "forms": {
+    "requiredField": "هذا الحقل مطلوب.",
+    "invalidPhone": "يرجى إدخال رقم هاتف صحيح.",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح.",
+    "invalidInputTitle": "بيانات غير صحيحة",
+    "checkHighlightedFields": "يرجى مراجعة الحقول المحددة.",
+    "submissionFailed": "فشل إرسال النموذج.",
+    "privacyConsent": "بإرسال النموذج فإنك توافق على سياسة الخصوصية"
+  },
+  "luckySpin": {
+    "submitError": "يرجى المحاولة مرة أخرى. تعذر حفظ نتيجتك.",
+    "missingFields": "يرجى إدخال الاسم ورقم الهاتف.",
+    "prizeTitle": "لقد ربحت"
+  },
+  "thankYou": {
+    "fallbackParagraph": "سنتواصل معك قريبًا لتأكيد بياناتك وحجز أفضل موعد مناسب لك."
+  },
+  "footer": {
+    "about": "في BM TURKIYE نعيد بناء الابتسامات الطبيعية والثابتة من خلال زراعة الأسنان والتعويضات الحديثة. خبرتنا، والتقنيات المتقدمة، والخطة الواضحة تجعل رحلتك العلاجية مفهومة من أول رسالة حتى آخر متابعة.",
+    "phoneLabel": "الهاتف:",
+    "whatsappLabel": "واتساب:",
+    "emailLabel": "البريد الإلكتروني:",
+    "addressLabel": "العنوان:",
+    "treatments": "العلاجات",
+    "popular": "العلاجات الأكثر طلبًا",
+    "beforeAfter": "قبل وبعد",
+    "testimonials": "آراء المرضى",
+    "faqs": "الأسئلة الشائعة",
+    "healthTourism": "السياحة العلاجية",
+    "badge": "طب أسنان متقدم • عناية شخصية",
+    "footerNote": "تجربة مريحة، وخطة واضحة، ونتائج بمستوى عالٍ.",
+    "copyright": "© 2026 د. محمد دغان. جميع الحقوق محفوظة.",
+    "privacy": "سياسة الخصوصية",
+    "terms": "الشروط والأحكام"
+  }
+}

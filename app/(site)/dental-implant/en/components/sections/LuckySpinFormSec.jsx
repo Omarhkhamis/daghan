@@ -3,12 +3,17 @@
 import { useId, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { luckySpinDefaults, SECTION_DEFAULTS_RU } from "../../../../../../lib/sectionDefaults";
+import {
+  getSectionDefaults,
+  luckySpinDefaults
+} from "../../../../../../lib/sectionDefaults";
 import { submitFormPayload } from "../../../../../../lib/formSubmit";
+import { getLocaleUi } from "../../../../../../lib/localeCopy";
 import {
   buildPrivacyPolicyLink,
   getPrivacyConsentText
 } from "../../../../../../lib/pageLinks";
+import { getLocaleFromPath } from "../../../../../../lib/sites";
 import PhoneField from "../../../../components/PhoneField";
 
 const wheelSvgTemplate = `
@@ -163,29 +168,25 @@ const buildWheelSvg = (prefix, labels) => {
   return svg;
 };
 
-export default function LuckySpinFormSec({ data, idPrefix, locale, site } = {}) {
-  const isRu = locale === "ru";
-  const ruDefaults = SECTION_DEFAULTS_RU?.luckySpin;
-  const content = isRu && ruDefaults
-    ? {
-        ...ruDefaults,
-        backgroundImage: data?.backgroundImage || ruDefaults.backgroundImage,
-        backgroundAlt: data?.backgroundAlt || ruDefaults.backgroundAlt,
-        prizes:
-          Array.isArray(data?.prizes) && data.prizes.length
-            ? data.prizes
-            : ruDefaults.prizes
-      }
-    : (data || luckySpinDefaults);
+export default function LuckySpinFormSec({
+  data,
+  idPrefix,
+  locale,
+  site,
+  showPrivacyConsent = true
+} = {}) {
+  const pathname = usePathname();
+  const resolvedLocale = locale || getLocaleFromPath(pathname);
+  const content =
+    data ||
+    getSectionDefaults("luckySpin", resolvedLocale, site) ||
+    luckySpinDefaults;
+  const uiCopy = getLocaleUi(resolvedLocale);
   const copy = {
-    submitError: isRu
-      ? "Пожалуйста, попробуйте еще раз. Мы не смогли сохранить ваш результат."
-      : "Please try again. We could not save your spin.",
-    missingFields: isRu
-      ? "Пожалуйста, введите имя и номер телефона."
-      : "Please enter your name and phone number.",
-    swalTitle: isRu ? "Ваш приз" : "You get",
-    swalConfirm: isRu ? "ОК" : "OK"
+    submitError: uiCopy.luckySpin.submitError,
+    missingFields: uiCopy.luckySpin.missingFields,
+    swalTitle: uiCopy.luckySpin.prizeTitle,
+    swalConfirm: uiCopy.common.ok
   };
   const prizes = content.prizes || [];
   const reactId = useId();
@@ -210,7 +211,6 @@ export default function LuckySpinFormSec({ data, idPrefix, locale, site } = {}) 
   const [fieldErrors, setFieldErrors] = useState({});
   const [formError, setFormError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const pathname = usePathname();
   const privacyLink = useMemo(
     () => buildPrivacyPolicyLink(pathname),
     [pathname]
@@ -252,8 +252,8 @@ export default function LuckySpinFormSec({ data, idPrefix, locale, site } = {}) 
     const trimmedPhone = phone.trim();
     if (!trimmedName || !trimmedPhone) {
       setFieldErrors({
-        name: !trimmedName ? "This field is required." : undefined,
-        phone: !trimmedPhone ? "This field is required." : undefined
+        name: !trimmedName ? uiCopy.forms.requiredField : undefined,
+        phone: !trimmedPhone ? uiCopy.forms.requiredField : undefined
       });
       return;
     }
@@ -531,14 +531,16 @@ export default function LuckySpinFormSec({ data, idPrefix, locale, site } = {}) 
                       <i className="fa-solid fa-lock text-emerald-600 text-[13px]"></i>
                       {content.form?.privacyNote}
                     </div>
-                    <p className="mt-2 text-[12px] text-main-500">
-                      <a
-                        href={privacyLink}
-                        className="underline decoration-main-400/70 underline-offset-4 hover:text-main-700"
-                      >
-                        {privacyText}
-                      </a>
-                    </p>
+                    {showPrivacyConsent ? (
+                      <p className="mt-2 text-[12px] text-main-500">
+                        <a
+                          href={privacyLink}
+                          className="underline decoration-main-400/70 underline-offset-4 hover:text-main-700"
+                        >
+                          {privacyText}
+                        </a>
+                      </p>
+                    ) : null}
                   </div>
 
                   <div className="mt-0  pt-6 flex justify-start">

@@ -1,0 +1,750 @@
+{
+  "hero": {
+    "videoUrl": "/img/general/tan%C4%B1t%C4%B1m.mp4",
+    "kicker": "Istanbul • Türkiye",
+    "titleLine1": "Dental Implants in Türkiye",
+    "titleLine2": "with BM TÜRKIEY",
+    "subtitle": "Advanced implantology, immediate-load options, and long-lasting restorations crafted in the heart of Istanbul.",
+    "whatsappCta": "WhatsApp Implant Plan →",
+    "form": {
+      "kicker": "Request an implant consultation",
+      "title": "Start your implant assessment",
+      "description": "Tell us about your missing teeth or implant needs. Our coordinators will call you shortly.",
+      "privacyNote": "Your details stay private.",
+      "submittingText": "SUBMITTING...",
+      "submitText": "SUBMIT REQUEST",
+      "fields": {
+        "fullNameLabel": "Full name",
+        "fullNamePlaceholder": "Name Surname",
+        "phoneLabel": "Phone",
+        "phonePlaceholder": "+44 ...",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Message (optional)",
+        "messagePlaceholder": "Describe missing teeth, dentures, or implant goals."
+      }
+    }
+  },
+  "dentalImplant": {
+    "headingLine1": "Implantology &",
+    "headingLine2": "Full-Arch Excellence",
+    "paragraphs": [
+      "At BM TÜRKIEY, we rebuild confident smiles with guided implant surgery, immediate loading when suitable, and precision prosthetics tailored to each jaw.",
+      "From single-tooth implants to All-on-4/All-on-6 rehabilitations, our surgeons and prosthodontists focus on long-term stability, chewing comfort, and natural aesthetics."
+    ],
+    "buttonText": "Get Implant Quote →",
+    "mainImage": "/uploads/dental-implant/smile1.jpg",
+    "mainImageAlt": "Dental implant restoration result",
+    "detailImage": "/uploads/dental-implant/smile2.jpg",
+    "detailImageAlt": "Implant-supported restoration detail"
+  },
+  "popularTreatments": {
+    "kicker": "Implant Solutions",
+    "title": "Most Requested Restorations",
+    "description": "Guided implant treatments designed for stability, fast healing, and natural-looking prosthetics.",
+    "ctaText": "Discuss My Implant Case →",
+    "ctaHref": "https://wa.me/+905465266449",
+    "items": [
+      {
+        "title": "All-on-4 / All-on-6",
+        "description": "Fixed full-arch solutions with guided surgery, titanium implants, and immediate provisional bridges when clinically suitable.",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg",
+        "alt": "All-on-4 dental implants"
+      },
+      {
+        "title": "Single & Multiple Implants",
+        "description": "Replace one or several missing teeth with precise implant placement and custom-milled crowns that blend seamlessly.",
+        "image": "/uploads/dental-implant/smile3.jpg",
+        "alt": "Single tooth dental implant"
+      },
+      {
+        "title": "Implant-Supported Bridges",
+        "description": "Stable, hygienic bridges anchored on implants to restore chewing power and natural tooth shape.",
+        "image": "/uploads/dental-implant/zirkonyum-veneers.jpg",
+        "alt": "Implant-supported bridge"
+      },
+      {
+        "title": "Bone Grafting & Sinus Lift",
+        "description": "Vertical and lateral augmentation, sinus lift, and PRF-supported healing to create the ideal foundation for implants.",
+        "image": "/uploads/dental-implant/sec-veneers.jpg",
+        "alt": "Bone grafting for dental implants"
+      }
+    ]
+  },
+  "bookAppointmentPrimary": {
+    "backgroundImage": "/uploads/clinic/clinic-1.jpeg",
+    "kicker": "Request an appointment",
+    "title": "Schedule your implant consultation",
+    "description": "Tell us about missing teeth, dentures, or implant goals. Our team will call you shortly.",
+    "privacyNote": "Your details stay private.",
+    "submittingText": "SUBMITTING...",
+    "submitText": "SUBMIT REQUEST",
+    "fields": {
+      "fullNameLabel": "Full name",
+      "fullNamePlaceholder": "Name Surname",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "+44 ...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message (optional)",
+      "messagePlaceholder": "Tell us briefly about your smile goals."
+    }
+  },
+  "beforeAfter": {
+    "titleLine1": "Implant Dentistry Center",
+    "titleLine2": "in Istanbul, Türkiye",
+    "bullets": [
+      {
+        "prefix": "Over ",
+        "highlight": "12,000 Implants",
+        "suffix": " placed"
+      },
+      {
+        "prefix": "Over ",
+        "highlight": "4,500 Full-arch",
+        "suffix": " restorations"
+      },
+      {
+        "prefix": "Digital planning with ",
+        "highlight": "guided surgery",
+        "suffix": " protocols"
+      },
+      {
+        "prefix": "",
+        "highlight": "Weekend & evening appointments",
+        "suffix": " — available by request"
+      }
+    ],
+    "ctaText": "Implant Consultation →",
+    "cases": [
+      {
+        "image": "/uploads/ba3.jpg",
+        "caption": "Full-arch implant bridge with immediate loading."
+      },
+      {
+        "image": "/uploads/ba2.jpg",
+        "caption": "Single implant crown matched to natural teeth."
+      },
+      {
+        "image": "/uploads/ba4.jpg",
+        "caption": "Upper and lower implant rehabilitation for function."
+      },
+      {
+        "image": "/uploads/ba13.jpg",
+        "caption": "Implant-supported bridge to replace multiple teeth."
+      },
+      {
+        "image": "/uploads/ba6.jpg",
+        "caption": "Before-after bite restoration with implants."
+      }
+    ]
+  },
+  "certificatesGallery": {
+    "kicker": "Certificates",
+    "title": "Certificates Gallery",
+    "description": "Official certificates and recognitions that reflect our quality standards.",
+    "items": [
+      {
+        "image": "/uploads/ba2.jpg",
+        "alt": "Certificate 1"
+      },
+      {
+        "image": "/uploads/ba3.jpg",
+        "alt": "Certificate 2"
+      },
+      {
+        "image": "/uploads/ba4.jpg",
+        "alt": "Certificate 3"
+      },
+      {
+        "image": "/uploads/ba6.jpg",
+        "alt": "Certificate 4"
+      }
+    ]
+  },
+  "fullWidthCampaign": {
+    "backgroundImage": "/uploads/air.jpg",
+    "backgroundAlt": "Dental Implant Travel Offer",
+    "overlayImage": "/uploads/dental-implant/smile3.jpg",
+    "overlayAlt": "Implant case highlight",
+    "badge": "Dental Implant",
+    "headingLine1": "Complimentary",
+    "headingLine2": "Flight for Full-Arch",
+    "description": "Round-trip tickets for qualifying All-on-4 / All-on-6 treatments."
+  },
+  "stepForm": {
+    "image": "/uploads/dental-implant/step-form-image.jpg",
+    "imageAlt": "Dental implant planning",
+    "kicker": "Quick Case Check",
+    "title": "Free Implant Analysis",
+    "progressLabel": "Progress",
+    "stepLabel": "Step",
+    "totalSteps": 3,
+    "selectedLabel": "Selected:",
+    "steps": {
+      "step1Title": "Select Case Type",
+      "step1Description": "Tell us what you need restored so we can match the right implant approach.",
+      "step2Title": "Pick Preferred Solution",
+      "step2Description": "Choose the option that best fits your goal. Final planning is confirmed after diagnostics.",
+      "step3Title": "Share Details",
+      "step3Description": "Leave your details — our coordinators will review and call you shortly.",
+      "privacyNote": "Your details stay private."
+    },
+    "genderOptions": [
+      {
+        "value": "single",
+        "label": "Single / Few Teeth",
+        "helper": "Case Type",
+        "icon": "fa-tooth"
+      },
+      {
+        "value": "full-arch",
+        "label": "Full-Arch / All-on-X",
+        "helper": "Case Type",
+        "icon": "fa-teeth-open"
+      },
+      {
+        "value": "denture",
+        "label": "Loose Denture",
+        "helper": "Case Type",
+        "icon": "fa-face-smile"
+      }
+    ],
+    "toothOptions": [
+      {
+        "key": "single-implant",
+        "label": "Single Implant",
+        "image": "/uploads/dental-implant/smile1.jpg"
+      },
+      {
+        "key": "implant-bridge",
+        "label": "Implant Bridge",
+        "image": "/uploads/dental-implant/zirkonyum-veneers.jpg"
+      },
+      {
+        "key": "all-on-4",
+        "label": "All-on-4",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg"
+      },
+      {
+        "key": "all-on-6",
+        "label": "All-on-6",
+        "image": "/uploads/dental-implant/smile3.jpg"
+      },
+      {
+        "key": "bone-graft",
+        "label": "Bone Graft / Sinus",
+        "image": "/uploads/dental-implant/sec-veneers.jpg"
+      }
+    ],
+    "fields": {
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "John Smith",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "+90 5xx xxx xx xx"
+    },
+    "prevLabel": "Prev",
+    "nextLabel": "Next",
+    "submitLabel": "Submit Request"
+  },
+  "treatments": {
+    "kicker": "Implant Dentistry",
+    "titleLine1": "Dental Implant,",
+    "titleLine2": "Full-Arch & Single-Tooth",
+    "description": "Fixed implant solutions restoring chewing power and confident smiles using guided surgery and custom prosthetics.",
+    "highlights": [
+      "Immediate or early loading when suitable",
+      "3D guided planning",
+      "Custom zirconia or porcelain bridges"
+    ],
+    "noteLabel": "Quick Note",
+    "noteText": "Final suitability is confirmed after CBCT and clinical assessment.",
+    "galleryLabel": "View Restorations",
+    "galleryHref": "/dental-implant/en/gallery",
+    "ctaText": "Book Implant Evaluation →",
+    "mediaItems": [
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "DWjaF4lDca8",
+        "poster": "/reels/DWjaF4lDca8.jpg",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "b285Dt47ipQ",
+        "poster": "/reels/b285Dt47ipQ.avif",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "Ht_YQEh9Gwo",
+        "poster": "/reels/Ht_YQEh9Gwo.avif",
+        "aspect": "9/16"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "id": "Ev7R2x0UCZo",
+        "poster": "/reels/Ev7R2x0UCZo.avif",
+        "aspect": "9/16"
+      }
+    ]
+  },
+  "bookAppointmentSecondary": {
+    "backgroundImage": "/uploads/clinic/clinic-1.jpeg",
+    "kicker": "Request an appointment",
+    "title": "Schedule your implant consultation",
+    "description": "Tell us about missing teeth, dentures, or implant goals. Our team will call you shortly.",
+    "privacyNote": "Your details stay private.",
+    "submittingText": "SUBMITTING...",
+    "submitText": "SUBMIT REQUEST",
+    "fields": {
+      "fullNameLabel": "Full name",
+      "fullNamePlaceholder": "Name Surname",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "+44 ...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message (optional)",
+      "messagePlaceholder": "Tell us briefly about your smile goals."
+    }
+  },
+  "internationalPatients": {
+    "backgroundImage": "/uploads/general/istanbul.jpg",
+    "backgroundAlt": "Istanbul",
+    "kicker": "• Istanbul • Health Tourism •",
+    "titleLine1": "BM TÜRKIEY",
+    "titleLine2": "International Patients Program",
+    "description": "We provide a seamless, safe and personalised implant treatment experience for international patients. With expert clinicians, modern technologies and dedicated coordinators, BM TÜRKIEY ensures a smooth and comfortable journey throughout your stay in Istanbul.",
+    "buttonText": "Book Consultation >"
+  },
+  "teamMembers": {
+    "kicker": "Team Members",
+    "title": "Meet the specialists behind every smile",
+    "description": "A multidisciplinary team of dentists and coordinators dedicated to crafting confident, natural-looking smiles.",
+    "items": [
+      {
+        "name": "Dr. Selin A.",
+        "role": "Lead Aesthetic Dentist",
+        "description": "Over 12 years in cosmetic dentistry focusing on natural veneers, smile design, and minimally invasive treatments.",
+        "image": "/uploads/team/dr-selin.jpg",
+        "alt": "Dr. Selin"
+      },
+      {
+        "name": "Dr. Emir K.",
+        "role": "Implant & Prosthodontics",
+        "description": "Full-mouth rehabilitations, advanced implant planning, and functional bite restoration with digital workflows.",
+        "image": "/uploads/team/dr-emir.jpg",
+        "alt": "Dr. Emir"
+      },
+      {
+        "name": "Elif T.",
+        "role": "Patient Coordinator",
+        "description": "Guides international patients, schedules appointments, and keeps every step transparent from first call to aftercare.",
+        "image": "/uploads/team/elif.jpg",
+        "alt": "Elif"
+      },
+      {
+        "name": "Mert C.",
+        "role": "Clinical Assistant",
+        "description": "Supports chairside care, sterilization protocols, and ensures every visit runs smoothly and on time.",
+        "image": "/uploads/team/mert.jpg",
+        "alt": "Mert"
+      }
+    ]
+  },
+  "clinic": {
+    "images": [
+      {
+        "src": "/uploads/clinic/clinic-1.jpeg",
+        "alt": "Clinic moment 1"
+      },
+      {
+        "src": "/uploads/clinic/clinic-2.jpeg",
+        "alt": "Clinic moment 2"
+      },
+      {
+        "src": "/uploads/clinic/clinic-3.jpeg",
+        "alt": "Clinic moment 3"
+      },
+      {
+        "src": "/uploads/clinic/clinic-4.jpeg",
+        "alt": "Clinic moment 4"
+      },
+      {
+        "src": "/uploads/clinic/clinic-6.jpeg",
+        "alt": "Clinic moment 5"
+      },
+      {
+        "src": "/uploads/clinic/clinic-7.jpeg",
+        "alt": "Clinic moment 6"
+      }
+    ],
+    "kicker": "Istanbul • Türkiye",
+    "titleLine1": "Award-Winning",
+    "titleLine2": "Smile Destination",
+    "paragraphs": [
+      "For years, our team has focused on designing natural, long-lasting smiles for patients from Türkiye, Europe, and around the world. Every treatment plan is prepared individually by combining minimally invasive techniques with advanced digital planning.",
+      "We take pride in a personalised approach, attention to detail, and results that feel natural, balanced, and confidence-boosting."
+    ],
+    "ctaText": "WhatsApp Consultation →"
+  },
+  "healthTourism": {
+    "kicker": "4 easy steps",
+    "title": "To Restore Your Bite",
+    "description": "From first message to final check-up, our team guides you through a seamless implant journey at BM TÜRKIEY.",
+    "steps": [
+      {
+        "icon": "fa-comments",
+        "label": "STEP 1",
+        "title": "Tell us your implant case",
+        "description": "Share missing teeth, denture issues, photos, and X-rays (if available). Our coordinators review your needs carefully."
+      },
+      {
+        "icon": "fa-clipboard-list",
+        "label": "STEP 2",
+        "title": "Plan & transparent quote",
+        "description": "Within 24 hours our doctors outline a tailored implant plan, healing timeline, and clear pricing."
+      },
+      {
+        "icon": "fa-plane-departure",
+        "label": "STEP 3",
+        "title": "Travel & implant surgery",
+        "description": "Once dates are set, we arrange airport pick-up, hotel options, and clinical appointments at BM TÜRKIEY."
+      },
+      {
+        "icon": "fa-check-circle",
+        "label": "STEP 4",
+        "title": "Last check-up & maintenance",
+        "description": "Before you return home, we complete final checks, provide hygiene guidance, and plan remote follow-ups."
+      }
+    ]
+  },
+  "luckySpin": {
+    "backgroundImage": "/uploads/spin-bg-bottom.png",
+    "backgroundAlt": "",
+    "kicker": "Lucky Spin",
+    "tagline": "Flip to Win",
+    "title": "Try Your Luck",
+    "description": "Try your luck to get a discount coupon.",
+    "spinLabel": "Spin Now",
+    "spinLoadingLabel": "Spinning...",
+    "resultLabel": "You get",
+    "resultPlaceholder": "Spin to reveal your prize.",
+    "prizes": [
+      "20% Discount",
+      "$75 Discount",
+      "10% Discount",
+      "50% Flight Ticket",
+      "$50 Discount",
+      "$100 Discount",
+      "15% Discount",
+      "$150 Discount"
+    ],
+    "form": {
+      "title": "Get your prize",
+      "description": "Enter your details to claim your offer.",
+      "fields": {
+        "fullNameLabel": "Full Name",
+        "fullNamePlaceholder": "Name Surname",
+        "phoneLabel": "Phone",
+        "phonePlaceholder": "+44 ..."
+      },
+      "submitText": "Submit Request",
+      "privacyNote": "Your details stay private."
+    }
+  },
+  "implantMatrix": {
+    "kicker": "Treatment Matrix",
+    "title": "Implant Options at a Glance",
+    "description": "Compare our most requested implant solutions, ideal indications, timelines in Türkiye, and expected results. Your final plan is confirmed after diagnostics.",
+    "columns": [
+      "Technique",
+      "Type",
+      "Ideal Candidates",
+      "Advantages",
+      "Disadvantages",
+      "Time in Türkiye",
+      "Results"
+    ],
+    "rows": [
+      {
+        "technique": "Single Implant",
+        "type": "Titanium post + crown",
+        "candidates": "1–3 missing teeth",
+        "advantages": "Natural feel, independent support",
+        "disadvantages": "Minor surgery, healing time",
+        "timeInTurkey": "5–7 days + healing",
+        "results": "Lifelong with proper care",
+        "values": [
+          "Single Implant",
+          "Titanium post + crown",
+          "1–3 missing teeth",
+          "Natural feel, independent support",
+          "Minor surgery, healing time",
+          "5–7 days + healing",
+          "Lifelong with proper care"
+        ]
+      },
+      {
+        "technique": "All-on-4 / All-on-6",
+        "type": "Full-arch prosthesis on implants",
+        "candidates": "Fully edentulous or failing dentition",
+        "advantages": "Fixed, stable, full set of teeth",
+        "disadvantages": "Requires healing period",
+        "timeInTurkey": "7–10 days",
+        "results": "Full-arch smile with high stability",
+        "values": [
+          "All-on-4 / All-on-6",
+          "Full-arch prosthesis on implants",
+          "Fully edentulous or failing dentition",
+          "Fixed, stable, full set of teeth",
+          "Requires healing period",
+          "7–10 days",
+          "Full-arch smile with high stability"
+        ]
+      },
+      {
+        "technique": "Zirconium Implant Crowns",
+        "type": "Ceramic crown on implant",
+        "candidates": "Aesthetic zones, cosmetic focus",
+        "advantages": "Highly aesthetic, metal-free",
+        "disadvantages": "Higher cost",
+        "timeInTurkey": "5–7 days",
+        "results": "Natural look, strong bite",
+        "values": [
+          "Zirconium Implant Crowns",
+          "Ceramic crown on implant",
+          "Aesthetic zones, cosmetic focus",
+          "Highly aesthetic, metal-free",
+          "Higher cost",
+          "5–7 days",
+          "Natural look, strong bite"
+        ]
+      },
+      {
+        "technique": "Bone Grafting",
+        "type": "Graft material + healing",
+        "candidates": "Patients with jawbone loss",
+        "advantages": "Enables implants in difficult cases",
+        "disadvantages": "Healing time required",
+        "timeInTurkey": "1–2 days (plus healing)",
+        "results": "Strong foundation for implants",
+        "values": [
+          "Bone Grafting",
+          "Graft material + healing",
+          "Patients with jawbone loss",
+          "Enables implants in difficult cases",
+          "Healing time required",
+          "1–2 days (plus healing)",
+          "Strong foundation for implants"
+        ]
+      },
+      {
+        "technique": "Immediate Implants",
+        "type": "Extraction + implant + temp tooth",
+        "candidates": "Select patients with healthy bone",
+        "advantages": "No waiting period, instant teeth",
+        "disadvantages": "Not suitable for everyone",
+        "timeInTurkey": "1–2 days",
+        "results": "Instant smile, long-term solution",
+        "values": [
+          "Immediate Implants",
+          "Extraction + implant + temp tooth",
+          "Select patients with healthy bone",
+          "No waiting period, instant teeth",
+          "Not suitable for everyone",
+          "1–2 days",
+          "Instant smile, long-term solution"
+        ]
+      },
+      {
+        "technique": "Digital Implant Planning",
+        "type": "3D imaging + guided surgery",
+        "candidates": "All implant patients",
+        "advantages": "Safe, accurate, less invasive",
+        "disadvantages": "Adds planning step",
+        "timeInTurkey": "Same day (planning)",
+        "results": "Precise implant placement",
+        "values": [
+          "Digital Implant Planning",
+          "3D imaging + guided surgery",
+          "All implant patients",
+          "Safe, accurate, less invasive",
+          "Adds planning step",
+          "Same day (planning)",
+          "Precise implant placement"
+        ]
+      }
+    ]
+  },
+  "techniquesUsed": {
+    "kicker": "Techniques Used",
+    "title": "Advanced implant methods we use",
+    "description": "From immediate implants to guided surgery, here are the core techniques our team applies to deliver stable, natural results.",
+    "slides": [
+      {
+        "title": "Immediate Implants",
+        "body": "For suitable cases, extraction and implant placement happen in the same visit, followed by a temporary crown. This reduces treatment time and avoids removable solutions during healing.",
+        "image": "/uploads/dental-implant/smile2.jpg"
+      },
+      {
+        "title": "All-on-4 / All-on-6",
+        "body": "Full-arch rehabilitation on 4–6 implants with guided planning and immediate provisional bridges when clinically appropriate, restoring confidence and function fast.",
+        "image": "/uploads/dental-implant/smile3.jpg"
+      },
+      {
+        "title": "Guided Surgery",
+        "body": "3D imaging, surgical guides, and precise planning to optimise implant positioning, safety, and long-term stability for both single implants and full-arch cases.",
+        "image": "/uploads/dental-implant/sec-dental-implant.jpg"
+      }
+    ]
+  },
+  "googleReviews": {
+    "kicker": "Google Reviews",
+    "title": "Real Patient Stories, Real Reviews",
+    "description": "A glimpse of what international patients say about their experience at BM TÜRKIEY.",
+    "rating": "4.9",
+    "ratingCountLabel": "380+ Reviews",
+    "ctaText": "Free Consultation →",
+    "items": [
+      {
+        "initials": "MM",
+        "name": "Matthew",
+        "text": "The entire implant process was seamless from the first WhatsApp message to the final check-up. The team explained every step clearly, helped with timing, and made me feel genuinely cared for. My new implant bridge looks incredibly natural — even months later, chewing feels stable and comfortable.",
+        "count": "57 Reviews"
+      },
+      {
+        "initials": "SS",
+        "name": "Sophie",
+        "text": "Super professional team and a beautiful clinic. I felt safe, informed, and the results exceeded my expectations.",
+        "count": "12 Reviews"
+      },
+      {
+        "initials": "HH",
+        "name": "Helen",
+        "text": "Loved the planning and communication. Everything ran on time, and the aftercare instructions were very clear.",
+        "count": "4 Reviews"
+      },
+      {
+        "initials": "DD",
+        "name": "Daniel",
+        "text": "The process was very transparent. I knew exactly what would be done and how long it would take. The result looks natural and feels great.",
+        "count": "23 Reviews"
+      },
+      {
+        "initials": "EE",
+        "name": "Emily",
+        "text": "Natural-looking teeth were my priority, and they nailed it. The shade and shape of my implant crowns fit my face perfectly.",
+        "count": "9 Reviews"
+      },
+      {
+        "initials": "OO",
+        "name": "Oliver",
+        "text": "The clinic was spotless and the team was very attentive. Aftercare support was excellent and they replied quickly whenever I had a question.",
+        "count": "31 Reviews"
+      }
+    ]
+  },
+  "trustpilotReviews": {
+    "kicker": "Trustpilot Reviews",
+    "title": "Real Patient Stories, Real Reviews",
+    "description": "A glimpse of what international patients say about their experience at BM TÜRKIEY.",
+    "rating": "4.9",
+    "ratingCountLabel": "380+ Reviews",
+    "ctaText": "Free Consultation →",
+    "items": [
+      {
+        "initials": "MM",
+        "name": "Matthew",
+        "text": "The entire implant process was seamless from the first WhatsApp message to the final check-up. The team explained every step clearly, helped with timing, and made me feel genuinely cared for. My new implant bridge looks incredibly natural — even months later, chewing feels stable and comfortable.",
+        "count": "57 Reviews"
+      },
+      {
+        "initials": "SS",
+        "name": "Sophie",
+        "text": "Super professional team and a beautiful clinic. I felt safe, informed, and the results exceeded my expectations.",
+        "count": "12 Reviews"
+      },
+      {
+        "initials": "HH",
+        "name": "Helen",
+        "text": "Loved the planning and communication. Everything ran on time, and the aftercare instructions were very clear.",
+        "count": "4 Reviews"
+      },
+      {
+        "initials": "DD",
+        "name": "Daniel",
+        "text": "The process was very transparent. I knew exactly what would be done and how long it would take. The result looks natural and feels great.",
+        "count": "23 Reviews"
+      },
+      {
+        "initials": "EE",
+        "name": "Emily",
+        "text": "Natural-looking teeth were my priority, and they nailed it. The shade and shape of my implant crowns fit my face perfectly.",
+        "count": "9 Reviews"
+      },
+      {
+        "initials": "OO",
+        "name": "Oliver",
+        "text": "The clinic was spotless and the team was very attentive. Aftercare support was excellent and they replied quickly whenever I had a question.",
+        "count": "31 Reviews"
+      }
+    ]
+  },
+  "faqs": {
+    "kicker": "Help Center",
+    "title": "Dental Implant FAQ",
+    "description": "Quick answers for international implant patients.",
+    "responseTimeLabel": "Average response time:",
+    "responseTimeValue": "30 minutes",
+    "footerNote": "For medical accuracy, a final plan is confirmed after clinical assessment.",
+    "form": {
+      "kicker": "Request an appointment",
+      "title": "Schedule your implant consultation",
+      "description": "Share a few details and our team will contact you shortly.",
+      "submittingText": "SUBMITTING...",
+      "submitText": "SUBMIT REQUEST",
+      "privacyNote": "Your details stay private.",
+      "fields": {
+        "fullNameLabel": "Full name",
+        "fullNamePlaceholder": "Name Surname",
+        "phoneLabel": "Phone",
+        "phonePlaceholder": "+44 ...",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Message (optional)",
+        "messagePlaceholder": "Tell us briefly about your smile goals."
+      }
+    },
+    "items": [
+      {
+        "icon": "fa-circle-question",
+        "title": "How long should I plan to stay for implants?",
+        "subtitle": "Full-arch cases typically need 5-7 days; staged healing is scheduled in advance.",
+        "body": "For All-on-4/All-on-6, expect diagnostics, surgery, and provisional fitting within the week. If bone grafting is required, we plan staged visits with clear timelines."
+      },
+      {
+        "icon": "fa-tooth",
+        "title": "Do dental implants hurt?",
+        "subtitle": "Modern anesthesia and guided techniques minimise discomfort.",
+        "body": "Most patients describe pressure rather than pain during placement. Mild post-op soreness is managed with medication and detailed aftercare instructions."
+      },
+      {
+        "icon": "fa-shield-heart",
+        "title": "Is there a warranty / aftercare plan?",
+        "subtitle": "Clear aftercare guidance and follow-up support after you return home.",
+        "body": "You'll receive written aftercare instructions, remote follow-ups, and manufacturer warranty details for the implants used. Prosthetic warranty terms are explained during consultation."
+      },
+      {
+        "icon": "fa-credit-card",
+        "title": "Can I get a transparent quote before travelling?",
+        "subtitle": "Yes — we provide a clear plan and cost estimate after your evaluation.",
+        "body": "Share your details, photos, and any scans; our team prepares a preliminary plan and estimate. Final pricing depends on clinical examination and confirmed scope."
+      }
+    ]
+  }
+}

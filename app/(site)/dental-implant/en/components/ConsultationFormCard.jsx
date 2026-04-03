@@ -5,13 +5,20 @@ import { usePathname } from "next/navigation";
 
 import { heroDefaults } from "../../../../../lib/sectionDefaults";
 import { buildFormPayload, submitFormPayload } from "../../../../../lib/formSubmit";
+import { getLocaleUi } from "../../../../../lib/localeCopy";
 import {
   buildPrivacyPolicyLink,
   getPrivacyConsentText
 } from "../../../../../lib/pageLinks";
+import { getLocaleFromPath } from "../../../../../lib/sites";
 import PhoneField from "../../../components/PhoneField";
 
-export default function ConsultationFormCard({ form, idPrefix, className }) {
+export default function ConsultationFormCard({
+  form,
+  idPrefix,
+  className,
+  showPrivacyConsent = true
+}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fieldErrors, setFieldErrors] = useState({});
   const [phoneValue, setPhoneValue] = useState("");
@@ -19,6 +26,8 @@ export default function ConsultationFormCard({ form, idPrefix, className }) {
   const resolvedForm = form || fallbackForm;
   const fields = resolvedForm.fields || fallbackForm.fields;
   const pathname = usePathname();
+  const locale = getLocaleFromPath(pathname);
+  const uiCopy = getLocaleUi(locale);
   const privacyLink = useMemo(
     () => buildPrivacyPolicyLink(pathname),
     [pathname]
@@ -36,20 +45,20 @@ export default function ConsultationFormCard({ form, idPrefix, className }) {
     const phoneDigits = String(phoneValue || "").replace(/\D/g, "");
 
     if (!nameValue) {
-      errors.name = "This field is required.";
+      errors.name = uiCopy.forms.requiredField;
     }
 
     if (!phoneValue) {
-      errors.phone = "This field is required.";
+      errors.phone = uiCopy.forms.requiredField;
     } else if (phoneDigits && phoneDigits.length < 8) {
-      errors.phone = "Please enter a valid phone number.";
+      errors.phone = uiCopy.forms.invalidPhone;
     }
 
     if (
       emailValue &&
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(emailValue).trim())
     ) {
-      errors.email = "Please enter a valid email address.";
+      errors.email = uiCopy.forms.invalidEmail;
     }
 
     return errors;
@@ -252,14 +261,16 @@ export default function ConsultationFormCard({ form, idPrefix, className }) {
 
                 {resolvedForm.privacyNote}
               </span>
-              <p className="mt-2 text-[12px] text-gray-300">
-                <a
-                  href={privacyLink}
-                  className="underline decoration-white/50 underline-offset-4 hover:text-white"
-                >
-                  {privacyText}
-                </a>
-              </p>
+              {showPrivacyConsent ? (
+                <p className="mt-2 text-[12px] text-gray-300">
+                  <a
+                    href={privacyLink}
+                    className="underline decoration-white/50 underline-offset-4 hover:text-white"
+                  >
+                    {privacyText}
+                  </a>
+                </p>
+              ) : null}
             </div>
           </form>
         </div>

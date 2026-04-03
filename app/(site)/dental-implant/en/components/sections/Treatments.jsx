@@ -2,10 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { getLocaleUi } from "../../../../../../lib/localeCopy";
 import { treatmentsDefaults } from "../../../../../../lib/sectionDefaults";
+import WhatsAppCta from "../WhatsAppCta";
 
-export default function Treatments({ data }) {
+export default function Treatments({ data, whatsappLink, locale = "en" }) {
   const content = data || treatmentsDefaults;
+  const uiCopy = getLocaleUi(locale);
   const mediaItems = content.mediaItems || [];
   const microHighlights = content.highlights || [];
   const [active, setActive] = useState(0);
@@ -253,14 +256,13 @@ export default function Treatments({ data }) {
 
             </div>
 
-            <button
-              type="button"
+            <WhatsAppCta
+              href={whatsappLink}
+              ariaLabel={content.ctaText}
               className="rounded-xl bg-gradient-to-r from-copper-600 to-copper-500 text-white shadow-[0_10px_10px_rgba(0,0,0,0.09)] hover:from-copper-700 hover:to-copper-500 px-4 py-3 text-[11.5px] font-medium uppercase tracking-[0.13em] inline-flex items-center justify-center cursor-pointer transition-transform duration-200 ease-out disabled:opacity-60 disabled:pointer-events-none"
-              onClick={() =>
-                window.dispatchEvent(new CustomEvent("open-book-consultation"))
-              }
             >
-              {content.ctaText}</button>
+              <span>{content.ctaText}</span>
+            </WhatsAppCta>
           </div>
 
           <div className="lg:col-span-5">
@@ -326,7 +328,7 @@ export default function Treatments({ data }) {
                 type="button"
                 className="absolute cursor-pointer left-0 sm:left-1 top-1/2 -translate-y-1/2 z-[70] p-2 rounded-full text-main-900/60 hover:text-copper-600 hover:scale-109 transition select-none"
                 onClick={prev}
-                aria-label="Previous"
+                aria-label={uiCopy.common.previous}
               >
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
                   <path
@@ -343,7 +345,7 @@ export default function Treatments({ data }) {
                 type="button"
                 className="absolute  cursor-pointer right-0 sm:right-1 top-1/2 -translate-y-1/2 z-[70] p-2 rounded-full text-main-900/60 hover:text-copper-600 hover:scale-109 transition select-none"
                 onClick={next}
-                aria-label="Next"
+                aria-label={uiCopy.common.next}
               >
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
                   <path
@@ -387,7 +389,7 @@ export default function Treatments({ data }) {
                       close();
                     }}
                     className="hidden sm:inline-flex absolute right-4 top-4 z-[120] h-10 w-10 items-center justify-center cursor-pointer rounded-full bg-black/60 text-white/90 text-2xl font-light hover:bg-white/10 transition"
-                    aria-label="Close"
+                    aria-label={uiCopy.common.close}
                   >
                     <span className="leading-none -translate-y-px select-none">
                       &times;

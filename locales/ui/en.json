@@ -1,0 +1,61 @@
+{
+  "common": {
+    "ok": "OK",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "call": "Call",
+    "callUs": "Call Us",
+    "whatsapp": "WhatsApp",
+    "verified": "Verified",
+    "hoverToReadMore": "Hover to read more",
+    "requestReceived": "Request Received"
+  },
+  "header": {
+    "bookConsultation": "Book Consultation"
+  },
+  "overlays": {
+    "freeConsultation": "Free Consultation",
+    "free": "Free",
+    "consultation": "Consultation",
+    "openLuckySpin": "Open Lucky Spin",
+    "tryChance": "Try your chance!"
+  },
+  "forms": {
+    "requiredField": "This field is required.",
+    "invalidPhone": "Please enter a valid phone number.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidInputTitle": "Invalid input",
+    "checkHighlightedFields": "Please check the highlighted fields.",
+    "submissionFailed": "Form submission failed.",
+    "privacyConsent": "By submitting the form, you agree to the Privacy Policy"
+  },
+  "luckySpin": {
+    "submitError": "Please try again. We could not save your spin.",
+    "missingFields": "Please enter your name and phone number.",
+    "prizeTitle": "You get"
+  },
+  "thankYou": {
+    "fallbackParagraph": "We'll call you shortly to confirm your details and book the best available time for you."
+  },
+  "footer": {
+    "about": "At BM TURKIYE, we rebuild stable, natural smiles with implantology and modern prosthodontics. Our experienced team, advanced technology, and transparent planning keep your treatment predictable from first message to final check-up.",
+    "phoneLabel": "Phone:",
+    "whatsappLabel": "WhatsApp:",
+    "emailLabel": "E-mail:",
+    "addressLabel": "Address:",
+    "treatments": "Treatments",
+    "popular": "Popular Treatments",
+    "beforeAfter": "Before & After",
+    "testimonials": "Testimonials",
+    "faqs": "FAQs",
+    "healthTourism": "Health Tourism",
+    "badge": "Advanced dentistry • Personalised care",
+    "footerNote": "Comfortable experience, clear planning, and premium results.",
+    "copyright": "© 2026 Dr Mehmet Daghan. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms"
+  }
+}

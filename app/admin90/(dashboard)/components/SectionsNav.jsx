@@ -2,13 +2,14 @@
 
 import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
+import { normalizeLocale } from "../../../../lib/sites";
 
 import CollapsibleNavGroup from "./CollapsibleNavGroup";
 
 export default function SectionsNav({ sections, locale: localeProp = "en" }) {
   const pathname = usePathname() || "";
   const searchParams = useSearchParams();
-  const localeFromSearch = searchParams.get("locale") === "ru" ? "ru" : "en";
+  const localeFromSearch = normalizeLocale(searchParams.get("locale"));
   const locale = localeProp || localeFromSearch;
   const base = "/admin90/sections";
   const isActive = pathname.startsWith(base);

@@ -6,11 +6,12 @@ import bcrypt from "bcryptjs";
 
 import { clearAdminSession } from "@lib/adminAuth";
 import { DEFAULT_CUSTOM_HEADER, getSharedCustomHeaderSite } from "@lib/customHeader";
+import { DEFAULT_GENERAL_SETTINGS } from "@lib/generalSettings";
 import { prisma } from "@lib/prisma";
 import { getSectionDefaults } from "@lib/sectionDefaults";
 import { applyFormData, mergeSectionData } from "@lib/sectionForm";
 import { ensureSeoSettings } from "@lib/seoSettings";
-import { normalizeLocale, normalizeSite, SITES } from "@lib/sites";
+import { normalizeLocale, normalizeSite, SITES, SUPPORTED_LOCALES } from "@lib/sites";
 import {
   normalizeButtonStyle,
   normalizeFontChoice,
@@ -27,6 +28,12 @@ const revalidatePublic = (site, locale) => {
 };
 
 const safeSite = (site) => normalizeSite(site) || "dental-implant";
+
+const revalidateSiteLocales = (site) => {
+  SUPPORTED_LOCALES.forEach((locale) => {
+    revalidatePublic(site, locale);
+  });
+};
 
 export const updateSectionAction = async (site, key, formData) => {
   const siteId = safeSite(site);
@@ -171,12 +178,17 @@ export const toggleSectionAction = async (site, key, locale = "en") => {
 export const updateGeneralSettingsAction = async (site, formData) => {
   const siteId = safeSite(site);
   try {
+    const existing = await prisma.generalSettings.findUnique({
+      where: { site: siteId },
+      select: { styles: true }
+    });
     const rawDelay = String(formData.get("consultationDelaySeconds") || "").trim();
     const parsedDelay = rawDelay ? Number(rawDelay) : null;
     const safeDelay =
       Number.isFinite(parsedDelay) && parsedDelay >= 0
         ? Math.round(parsedDelay)
         : null;
+    const showPrivacyConsent = formData.get("showPrivacyConsent") === "on";
     const data = {
       phone: String(formData.get("phone") || "").trim() || null,
       email: String(formData.get("email") || "").trim() || null,
@@ -188,6 +200,10 @@ export const updateGeneralSettingsAction = async (site, formData) => {
       logoUrl: String(formData.get("logoUrl") || "").trim() || null,
       faviconUrl: String(formData.get("faviconUrl") || "").trim() || null,
       consultationDelaySeconds: safeDelay,
+      styles: {
+        ...(existing?.styles || {}),
+        showPrivacyConsent
+      },
       social: {
         instagram: String(formData.get("instagram") || "").trim() || null,
         facebook: String(formData.get("facebook") || "").trim() || null,
@@ -205,14 +221,17 @@ export const updateGeneralSettingsAction = async (site, formData) => {
   }
 
   revalidatePath(`/admin90/general`);
-  revalidatePublic(siteId, "en");
-  revalidatePublic(siteId, "ru");
+  revalidateSiteLocales(siteId);
   redirect(`/admin90/general?saved=1`);
 };
 
 export const updateStylesSettingsAction = async (formData) => {
   const siteId = "dental-implant";
   try {
+    const existing = await prisma.generalSettings.findUnique({
+      where: { site: siteId },
+      select: { styles: true }
+    });
     const primaryColor = normalizeHexColor(
       String(formData.get("primaryColor") || "").trim() || "#5a918a"
     );
@@ -232,6 +251,7 @@ export const updateStylesSettingsAction = async (formData) => {
       update: {
         primaryColor,
         styles: {
+          ...(existing?.styles || {}),
           backgroundColor,
           textColor,
           fontFamily,
@@ -242,6 +262,9 @@ export const updateStylesSettingsAction = async (formData) => {
         site: siteId,
         primaryColor,
         styles: {
+          showPrivacyConsent:
+            existing?.styles?.showPrivacyConsent ??
+            DEFAULT_GENERAL_SETTINGS.styles.showPrivacyConsent,
           backgroundColor,
           textColor,
           fontFamily,
@@ -254,8 +277,7 @@ export const updateStylesSettingsAction = async (formData) => {
   }
 
   revalidatePath(`/admin90/styles`);
-  revalidatePublic(siteId, "en");
-  revalidatePublic(siteId, "ru");
+  revalidateSiteLocales(siteId);
   redirect(`/admin90/styles?saved=1`);
 };
 
@@ -315,8 +337,7 @@ export const updateCustomHeaderAction = async (site, formData) => {
   }
 
   SITES.forEach((siteItem) => {
-    revalidatePublic(siteItem.id, "en");
-    revalidatePublic(siteItem.id, "ru");
+    revalidateSiteLocales(siteItem.id);
   });
   redirect(`/admin90/custom-header?saved=1`);
 };

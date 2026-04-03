@@ -3,8 +3,9 @@ import DentalHeader from "../dental-implant/en/components/Header";
 import CustomHeadSnippet from "../../components/CustomHeadSnippet";
 import { getCustomHeader } from "../../../lib/customHeader";
 import { getGeneralSettings } from "../../../lib/generalSettings";
+import { getLocaleFontClassName } from "../../../lib/localeFont";
 import { getPageBySlug } from "../../../lib/pages";
-import { normalizeLocale } from "../../../lib/sites";
+import { isRtlLocale, normalizeLocale } from "../../../lib/sites";
 
 export const dynamic = "force-dynamic";
 
@@ -24,13 +25,18 @@ export default async function PrivacyPolicyPage({ searchParams }) {
     getPageBySlug("privacy-policy", locale),
     getCustomHeader(SITE)
   ]);
+  const localeFontClassName = getLocaleFontClassName(locale);
 
   if (!page) {
     return null;
   }
 
   return (
-    <>
+    <div
+      lang={locale}
+      dir={isRtlLocale(locale) ? "rtl" : "ltr"}
+      className={localeFontClassName}
+    >
       <CustomHeadSnippet html={customHeader?.content} />
       <DentalHeader general={general} locale={locale} />
       <main className="mx-auto min-h-[70vh] max-w-screen-md px-6 lg:px-10 py-16 lg:py-20 pt-24 flex items-center">
@@ -49,6 +55,6 @@ export default async function PrivacyPolicyPage({ searchParams }) {
       {customHeader?.bodyContent ? (
         <div dangerouslySetInnerHTML={{ __html: customHeader.bodyContent }} />
       ) : null}
-    </>
+    </div>
   );
 }

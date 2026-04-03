@@ -3,9 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 
 import { certificatesGalleryDefaults } from "../../../../../../lib/sectionDefaults";
+import { isRtlLocale } from "../../../../../../lib/sites";
 
-export default function CertificatesGallery({ data }) {
+export default function CertificatesGallery({ data, locale = "en" }) {
   const content = data || certificatesGalleryDefaults;
+  const isRtl = isRtlLocale(locale);
   const items = Array.isArray(content.items) ? content.items : [];
   const sliderRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -94,11 +96,16 @@ export default function CertificatesGallery({ data }) {
           </div>
         ) : null}
 
-        <div ref={sliderRef} className="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+        <div
+          ref={sliderRef}
+          dir="ltr"
+          className="flex gap-4 overflow-x-auto no-scrollbar pb-2"
+        >
           {items.map((item, index) => (
             <div
               key={`${item.image || "certificate"}-${index}`}
               data-certificate-card="1"
+              dir={isRtl ? "rtl" : "ltr"}
               className="w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)] shrink-0"
             >
               <div className="aspect-[4/3] w-full overflow-hidden">

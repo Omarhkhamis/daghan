@@ -18,16 +18,18 @@ export default function PhoneField({
     variant === "dark" ? "phone-field--dark" : "phone-field--light";
 
   return (
-    <PhoneInput
-      defaultCountry={defaultCountry}
-      value={value}
-      onChange={onChange}
-      name={name}
-      placeholder={placeholder}
-      autoComplete={autoComplete}
-      className={`phone-field ${variantClass}`}
-      inputClassName={inputClassName}
-      inputProps={{ onInput }}
-    />
+    <div dir="ltr">
+      <PhoneInput
+        defaultCountry={defaultCountry}
+        value={value}
+        onChange={onChange}
+        name={name}
+        placeholder={placeholder}
+        autoComplete={autoComplete}
+        className={`phone-field ${variantClass}`}
+        inputClassName={inputClassName}
+        inputProps={{ onInput }}
+      />
+    </div>
   );
 }

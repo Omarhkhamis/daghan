@@ -1,5 +1,5 @@
 import { DEFAULT_GENERAL_SETTINGS } from "../../../../../lib/generalSettings";
-import { SECTION_DEFAULTS_RU } from "../../../../../lib/sectionDefaults";
+import { getLocaleUi } from "../../../../../lib/localeCopy";
 
 export default function Footer({ general, locale = "en", site }) {
   const settings = general || DEFAULT_GENERAL_SETTINGS;
@@ -17,12 +17,10 @@ export default function Footer({ general, locale = "en", site }) {
   const instagramLink = settings.social?.instagram || "#";
   const facebookLink = settings.social?.facebook || "#";
   const youtubeLink = settings.social?.youtube || "#";
-  const i18n = locale === "ru" ? SECTION_DEFAULTS_RU.footer : null;
-  const badgeCopy = i18n?.badge || "Advanced dentistry • Personalised care";
-  const footerNote =
-    i18n?.footerNote || "Comfortable experience, clear planning, and premium results.";
-  const copyrightCopy =
-    i18n?.copyright || "© 2026 Dr Mehmet Daghan. All Rights Reserved.";
+  const i18n = getLocaleUi(locale).footer;
+  const badgeCopy = i18n.badge;
+  const footerNote = i18n.footerNote;
+  const copyrightCopy = i18n.copyright;
   const buildPageLink = (path) => {
     const params = new URLSearchParams();
     if (locale) params.set("locale", locale);
@@ -48,8 +46,7 @@ export default function Footer({ general, locale = "en", site }) {
 
               <div className="space-y-2 mt-4 sm:mt-0">
                 <p className="text-sm font-light text-gray-600 leading-relaxed lg:max-w-md">
-                  {i18n?.about ||
-                    "At BM TÜRKIEY, we rebuild stable, natural smiles with implantology and modern prosthodontics. Our experienced team, advanced technology, and transparent planning keep your treatment predictable from first message to final check-up."}
+                  {i18n.about}
                 </p>
               </div>
             </div>
@@ -99,7 +96,7 @@ export default function Footer({ general, locale = "en", site }) {
                 className="group inline-flex items-center gap-2 text-gray-600 hover:text-copper-900 transition"
               >
                 <span className="h-1 w-1 rounded-full bg-gray-300 group-hover:bg-copper-400 transition"></span>
-                {i18n?.treatments || "Treatments"}
+                {i18n.treatments}
               </a>
 
               <a
@@ -107,7 +104,7 @@ export default function Footer({ general, locale = "en", site }) {
                 className="group inline-flex items-center gap-2 text-gray-600 hover:text-copper-900 transition"
               >
                 <span className="h-1 w-1 rounded-full bg-gray-300 group-hover:bg-copper-400 transition"></span>
-                {i18n?.popular || "Popular Treatments"}
+                {i18n.popular}
               </a>
 
               <a
@@ -115,7 +112,7 @@ export default function Footer({ general, locale = "en", site }) {
                 className="group inline-flex items-center gap-2 text-gray-600 hover:text-copper-900 transition"
               >
                 <span className="h-1 w-1 rounded-full bg-gray-300 group-hover:bg-copper-400 transition"></span>
-                {i18n?.beforeAfter || "Before & After"}
+                {i18n.beforeAfter}
               </a>
 
               <a
@@ -123,7 +120,7 @@ export default function Footer({ general, locale = "en", site }) {
                 className="group inline-flex items-center gap-2 text-gray-600 hover:text-copper-900 transition"
               >
                 <span className="h-1 w-1 rounded-full bg-gray-300 group-hover:bg-copper-400 transition"></span>
-                {i18n?.testimonials || "Testimonials"}
+                {i18n.testimonials}
               </a>
 
               <a
@@ -131,7 +128,7 @@ export default function Footer({ general, locale = "en", site }) {
                 className="group inline-flex items-center gap-2 text-gray-600 hover:text-copper-900 transition"
               >
                 <span className="h-1 w-1 rounded-full bg-gray-300 group-hover:bg-copper-400 transition"></span>
-                {i18n?.faqs || "FAQs"}
+                {i18n.faqs}
               </a>
 
               <a
@@ -139,7 +136,7 @@ export default function Footer({ general, locale = "en", site }) {
                 className="group inline-flex items-center gap-2 text-gray-600 hover:text-copper-900 transition"
               >
                 <span className="h-1 w-1 rounded-full bg-gray-300 group-hover:bg-copper-400 transition"></span>
-                {i18n?.healthTourism || "Health Tourism"}
+                {i18n.healthTourism}
               </a>
             </div>
 
@@ -152,7 +149,7 @@ export default function Footer({ general, locale = "en", site }) {
             <div className="space-y-2 text-sm font-light text-gray-600">
               <p>
                 <span className="font-medium text-copper-900">
-                  {i18n?.phoneLabel || "Phone:"}
+                  {i18n.phoneLabel}
                 </span>
                 <a
                   className="hover:text-copper-900 transition"
@@ -164,7 +161,7 @@ export default function Footer({ general, locale = "en", site }) {
 
               <p>
                 <span className="font-medium text-copper-900">
-                  {i18n?.whatsappLabel || "WhatsApp:"}
+                  {i18n.whatsappLabel}
                 </span>
                 <a
                   className="hover:text-copper-900 transition"
@@ -178,7 +175,7 @@ export default function Footer({ general, locale = "en", site }) {
 
               <p>
                 <span className="font-medium text-copper-900">
-                  {i18n?.emailLabel || "E-mail:"}
+                  {i18n.emailLabel}
                 </span>
                 <a
                   className="hover:text-copper-900 transition"
@@ -190,7 +187,7 @@ export default function Footer({ general, locale = "en", site }) {
 
               <p className="leading-relaxed">
                 <span className="font-medium text-copper-900">
-                  {i18n?.addressLabel || "Address:"}
+                  {i18n.addressLabel}
                 </span>
                 {settings.address}
               </p>
@@ -208,14 +205,14 @@ export default function Footer({ general, locale = "en", site }) {
               href={buildPageLink("/privacy-policy")}
               className="bg-transparent p-0 border-0 hover:text-gray-800 transition"
             >
-              {i18n?.privacy || "Privacy Policy"}
+              {i18n.privacy}
             </a>
             <span className="text-gray-300">|</span>
             <a
               href={buildPageLink("/terms")}
               className="bg-transparent p-0 border-0 hover:text-gray-800 transition"
             >
-              {i18n?.terms || "Terms"}
+              {i18n.terms}
             </a>
           </div>
         </div>
