@@ -62,7 +62,7 @@ export default function MediaUpload() {
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Upload</p>
       <p className="mt-2 text-sm text-slate-600">
-        PNG, JPG, JPEG, JFIF, WEBP, GIF, SVG, MP4 supported. Max 50MB.
+        PNG, JPG, JPEG, JFIF, WEBP, GIF, SVG, MP4 supported. Max 5MB.
       </p>
       <p className="mt-1 text-xs text-slate-500">
         HEIC and AVIF are not supported in the dashboard uploader.

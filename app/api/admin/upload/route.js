@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
 
-const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ALLOWED_TYPES = new Set([
   "image/png",
   "image/jpeg",
@@ -52,7 +52,7 @@ export const POST = async (request) => {
 
   if (file.size > MAX_FILE_SIZE) {
     return NextResponse.json(
-      { error: "File too large. Max size is 50MB." },
+      { error: "File too large. Max size is 5MB." },
       { status: 400 }
     );
   }
