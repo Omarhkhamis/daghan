@@ -37,3 +37,4 @@ prisma/dev.db
 /src/generated/prisma
 .env.local
 .env
+DEPLOY_INSTRUCTIONS.md
